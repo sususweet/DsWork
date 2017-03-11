@@ -4,14 +4,26 @@
 CMakeFiles/Project1.dir/arrayList.c.obj
  I:/DatabaseStructure/Project1/arrayList.c
  I:/DatabaseStructure/Project1/arrayList.h
+CMakeFiles/Project1.dir/common/errorHandler.c.obj
+ I:/DatabaseStructure/Project1/common/errorHandler.c
+CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj
+ I:/DatabaseStructure/Project1/functions/expressionCalculation.c
+ I:/DatabaseStructure/Project1/functions/expressionCalculation.h
+ I:/DatabaseStructure/Project1/linkList.h
+CMakeFiles/Project1.dir/functions/polyCalculation.c.obj
+ I:/DatabaseStructure/Project1/functions/polyCalculation.c
+ I:/DatabaseStructure/Project1/functions/polyCalculation.h
+ I:/DatabaseStructure/Project1/linkList.h
+ I:/DatabaseStructure/Project1/polynomial.h
 CMakeFiles/Project1.dir/linkList.c.obj
  I:/DatabaseStructure/Project1/linkList.c
  I:/DatabaseStructure/Project1/linkList.h
 CMakeFiles/Project1.dir/main.c.obj
+ I:/DatabaseStructure/Project1/./functions/polyCalculation.h
  I:/DatabaseStructure/Project1/arrayList.h
+ I:/DatabaseStructure/Project1/functions/expressionCalculation.h
  I:/DatabaseStructure/Project1/linkList.h
  I:/DatabaseStructure/Project1/main.c
- I:/DatabaseStructure/Project1/polynomial.h
 CMakeFiles/Project1.dir/polynomial.c.obj
  I:/DatabaseStructure/Project1/linkList.h
  I:/DatabaseStructure/Project1/polynomial.c

@@ -1,60 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "arrayList.h"
 #include "linkList.h"
-#include "polynomial.h"
+#include "./functions/polyCalculation.h"
+#include "functions/expressionCalculation.h"
 
 int operationArrayList();
 int operationLinkList();
+int operationStack();
+
 int linkList_compare(LinkListValue value1, LinkListValue value2);
 
 int main(){
-    char confirm;
-    LinkListEntry *polyList1, *polyList2;
+   // polyCalculation();
+    //operationStack();
 
-    while(1){
-        printf("请输入第一个一元多项式，按照\"系数,指数\"的格式输入，各项之间以空格分开：\n");
-        polyList1 = poly_getPoly();
-        printf("你输入的多项式为: 确认请输入y，否则请输入任意其他字符！\n");
-        poly_showPoly(polyList1);
-        scanf("%c",&confirm);
-        if (confirm == 'y') break;
-    }
+    expCalculation();
 
-    while(1){
-        printf("请输入第二个一元多项式，按照\"系数,指数\"的格式输入，各项之间以空格分开：\n");
-        polyList2 = poly_getPoly();
-        printf("你输入的多项式为: 确认请输入y，否则请输入任意其他字符！\n");
-        poly_showPoly(polyList2);
-        scanf("%c",&confirm);
-        if (confirm == 'y') break;
-    }
 
-    printf("参数确认成功！\n");
-
-    printf("你输入的第一个多项式为:\n");
-    polyList1 = poly_sortPoly(polyList1);
-    poly_showPoly(polyList1);
-
-    printf("你输入的第二个多项式为:\n");
-    polyList2 = poly_sortPoly(polyList2);
-    poly_showPoly(polyList2);
-
-    LinkListEntry* polyPlusResult = poly_plusPoly(polyList1,polyList2);
-    printf("多项式相加的结果是: \n");
-    poly_showPoly(polyPlusResult);
-
-    LinkListEntry* polyMultiResult = poly_multiPoly(polyList1,polyList2);
-    /*printf("多项式相乘的结果是: \n");
-    poly_showPoly(polyMultiResult);*/
-
-    printf("多项式相乘合并同类项的结果是: \n");
-    LinkListEntry* polyMergeResult = poly_mergePoly(polyMultiResult);
-    poly_showPoly(polyMergeResult);
-
-    printf("降序排列的结果是: \n");
-    LinkListEntry* polySortResult = poly_sortPoly(polyMergeResult);
-    poly_showPoly(polySortResult);
     system("pause");
     return 0;
 }
@@ -67,6 +31,29 @@ int linkList_compare(LinkListValue value1, LinkListValue value2){
     else if (value1 < value2) return -1;
 }
 
+int operationStack(){
+    LinkListEntry* linkList = linkList_initList();
+    linkList_pop(linkList);
+    linkList_pop(linkList);
+    linkList_pop(linkList);
+
+    linkList_push(linkList, 2);
+    linkList_push(linkList, 5);
+    linkList_push(linkList, 6);
+    linkList_push(linkList, 2);
+    linkList_show(linkList);
+
+    linkList_pop(linkList);
+    linkList_show(linkList);
+
+    printf("The top value of the stack is : %d\n", linkList_peek(linkList));;
+    linkList_show(linkList);
+
+    printf("The length of the stack is : %d\n",linkList_getLength(linkList));
+    linkList_destroy(linkList);
+}
+
+
 int operationLinkList(){
     LinkListEntry* linkList = linkList_initList();
     linkList_appendNode(linkList, 1);
@@ -74,8 +61,9 @@ int operationLinkList(){
     linkList_appendNode(linkList, 5);
     linkList_appendNode(linkList, 6);
     linkList_appendNode(linkList, 2);
+    linkList_prependNode(linkList, 1231321);
     linkList_show(linkList);
-    linkList_deleteNode(linkList_getIndexEntryByIndex(linkList,0),linkList);
+    linkList_deleteNode(linkList,linkList_getIndexEntryByIndex(linkList,0));
     linkList_show(linkList);
     linkList_getIndexEntryByData(linkList, 2 ,linkList_compare);
     printf("The length of the linkList is : %d\n",linkList_getLength(linkList));

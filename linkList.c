@@ -69,6 +69,10 @@ LinkListEntry* linkList_getAfter(LinkListEntry* index){
     return index->next;
 }
 
+LinkListEntry* linkList_getFirstNode(LinkListEntry* linkList){
+    return linkList->next;
+}
+
 LinkListEntry* linkList_getLastNode(LinkListEntry* linkList){
     LinkListEntry* linkListCache = linkList;
     while (linkListCache->next != NULL) {
@@ -126,12 +130,15 @@ LinkListEntry* linkList_addNode(LinkListEntry* insertIndex, LinkListValue* data)
     return newLinkListEntry;
 }
 
+LinkListEntry* linkList_prependNode(LinkListEntry* linkList, LinkListValue* data){
+    linkList_addNode(linkList, data);
+}
+
 LinkListEntry* linkList_appendNode(LinkListEntry* linkList, LinkListValue* data){
     linkList_addNode(linkList_getLastNode(linkList), data);
 }
 
-
-int linkList_deleteNode(LinkListEntry* deleteIndex, LinkListEntry* linkList){
+int linkList_deleteNode(LinkListEntry* linkList, LinkListEntry* deleteIndex){
     if (deleteIndex == NULL) {
         printf("linkList delete operation failed. Please check the index for deletion!\n");
         return -1;
@@ -142,4 +149,36 @@ int linkList_deleteNode(LinkListEntry* deleteIndex, LinkListEntry* linkList){
     free(deleteIndex);
     //printf("linkList delete operation succeed.\n");
     return 0;
+}
+
+LinkListEntry* linkList_push(LinkListEntry* linkList, LinkListValue* data){
+    if (linkList_prependNode(linkList, data) == NULL){
+        printf("stack PUSH operation failed!\n");
+        return NULL;
+    };
+}
+
+LinkListValue linkList_pop(LinkListEntry* linkList){
+    LinkListEntry* targetEntry = linkList_getFirstNode(linkList);
+    if (targetEntry != NULL){
+        LinkListValue targetData = targetEntry -> data;
+        if (linkList_deleteNode(linkList,targetEntry) == 0) return targetData;
+        else {
+            printf("stack POP operation failed. Please check the stack!\n");
+            return NULL;
+        }
+    }
+    printf("stack POP operation failed. Please check the stack!\n");
+    return NULL;
+}
+
+LinkListValue linkList_peek(LinkListEntry* linkList){
+    LinkListEntry* targetEntry = linkList_getFirstNode(linkList);
+    if (targetEntry != NULL){
+        LinkListValue targetData = targetEntry -> data;
+        return targetData;
+    }else {
+        printf("stack PEEK operation failed. Please check the stack!\n");
+        return NULL;
+    }
 }

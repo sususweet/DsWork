@@ -4,13 +4,25 @@
 CMakeFiles/Project1.dir/arrayList.c.obj: ../arrayList.c
 CMakeFiles/Project1.dir/arrayList.c.obj: ../arrayList.h
 
+CMakeFiles/Project1.dir/common/errorHandler.c.obj: ../common/errorHandler.c
+
+CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../functions/expressionCalculation.c
+CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../functions/expressionCalculation.h
+CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../linkList.h
+
+CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../functions/polyCalculation.c
+CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../functions/polyCalculation.h
+CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../linkList.h
+CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../polynomial.h
+
 CMakeFiles/Project1.dir/linkList.c.obj: ../linkList.c
 CMakeFiles/Project1.dir/linkList.c.obj: ../linkList.h
 
+CMakeFiles/Project1.dir/main.c.obj: .././functions/polyCalculation.h
 CMakeFiles/Project1.dir/main.c.obj: ../arrayList.h
+CMakeFiles/Project1.dir/main.c.obj: ../functions/expressionCalculation.h
 CMakeFiles/Project1.dir/main.c.obj: ../linkList.h
 CMakeFiles/Project1.dir/main.c.obj: ../main.c
-CMakeFiles/Project1.dir/main.c.obj: ../polynomial.h
 
 CMakeFiles/Project1.dir/polynomial.c.obj: ../linkList.h
 CMakeFiles/Project1.dir/polynomial.c.obj: ../polynomial.c

@@ -27,13 +27,19 @@ PolyNode* poly_initItem(){
 LinkListEntry* poly_getPoly(){
     int exp_temp,coe_tmp;
     char lf;
+    int scanResult;
 
     LinkListEntry* polyList = linkList_initList();
 
     while(1){
-        PolyNode* poly_tmp = poly_initItem();
+        scanResult = scanf("%d %d%c",&coe_tmp, &exp_temp, &lf);
+        if (scanResult != 3) {
+            free (polyList);
+            fflush (stdin);
+            return NULL;
+        }
 
-        scanf("%d,%d%c",&coe_tmp, &exp_temp, &lf);
+        PolyNode* poly_tmp = poly_initItem();
         poly_tmp -> coefficient = coe_tmp;
         poly_tmp -> exponent = exp_temp;
 
@@ -70,7 +76,9 @@ LinkListEntry* poly_mergePoly(LinkListEntry* polyList){
                 PolyNode* polyNode2 = polyCache2->data;
                 if  (polyNode1->exponent == polyNode2->exponent){
                     polyNode1->coefficient = polyNode1->coefficient + polyNode2->coefficient;
-                    linkList_deleteNode(polyCache2, polyListTemp);
+                    LinkListEntry* temp = linkList_getBefore(polyListTemp, polyCache2);
+                    linkList_deleteNode(polyListTemp, polyCache2);
+                    polyCache2 = temp;
                 }
             }
 

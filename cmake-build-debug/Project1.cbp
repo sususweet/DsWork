@@ -88,6 +88,24 @@
 		<Unit filename="I:/DatabaseStructure/Project1/arrayList.h">
 			<Option target="Project1"/>
 		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/common/errorHandler.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/common/errorHandler.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/functions/expressionCalculation.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/functions/expressionCalculation.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/functions/polyCalculation.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/functions/polyCalculation.h">
+			<Option target="Project1"/>
+		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/linkList.c">
 			<Option target="Project1"/>
 		</Unit>

@@ -149,6 +149,87 @@ arrayList.c.s:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/arrayList.c.s
 .PHONY : arrayList.c.s
 
+common/errorHandler.obj: common/errorHandler.c.obj
+
+.PHONY : common/errorHandler.obj
+
+# target to build an object file
+common/errorHandler.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/common/errorHandler.c.obj
+.PHONY : common/errorHandler.c.obj
+
+common/errorHandler.i: common/errorHandler.c.i
+
+.PHONY : common/errorHandler.i
+
+# target to preprocess a source file
+common/errorHandler.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/common/errorHandler.c.i
+.PHONY : common/errorHandler.c.i
+
+common/errorHandler.s: common/errorHandler.c.s
+
+.PHONY : common/errorHandler.s
+
+# target to generate assembly for a file
+common/errorHandler.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/common/errorHandler.c.s
+.PHONY : common/errorHandler.c.s
+
+functions/expressionCalculation.obj: functions/expressionCalculation.c.obj
+
+.PHONY : functions/expressionCalculation.obj
+
+# target to build an object file
+functions/expressionCalculation.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj
+.PHONY : functions/expressionCalculation.c.obj
+
+functions/expressionCalculation.i: functions/expressionCalculation.c.i
+
+.PHONY : functions/expressionCalculation.i
+
+# target to preprocess a source file
+functions/expressionCalculation.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/expressionCalculation.c.i
+.PHONY : functions/expressionCalculation.c.i
+
+functions/expressionCalculation.s: functions/expressionCalculation.c.s
+
+.PHONY : functions/expressionCalculation.s
+
+# target to generate assembly for a file
+functions/expressionCalculation.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/expressionCalculation.c.s
+.PHONY : functions/expressionCalculation.c.s
+
+functions/polyCalculation.obj: functions/polyCalculation.c.obj
+
+.PHONY : functions/polyCalculation.obj
+
+# target to build an object file
+functions/polyCalculation.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/polyCalculation.c.obj
+.PHONY : functions/polyCalculation.c.obj
+
+functions/polyCalculation.i: functions/polyCalculation.c.i
+
+.PHONY : functions/polyCalculation.i
+
+# target to preprocess a source file
+functions/polyCalculation.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/polyCalculation.c.i
+.PHONY : functions/polyCalculation.c.i
+
+functions/polyCalculation.s: functions/polyCalculation.c.s
+
+.PHONY : functions/polyCalculation.s
+
+# target to generate assembly for a file
+functions/polyCalculation.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/polyCalculation.c.s
+.PHONY : functions/polyCalculation.c.s
+
 linkList.obj: linkList.c.obj
 
 .PHONY : linkList.obj
@@ -242,6 +323,15 @@ help:
 	@echo ... arrayList.obj
 	@echo ... arrayList.i
 	@echo ... arrayList.s
+	@echo ... common/errorHandler.obj
+	@echo ... common/errorHandler.i
+	@echo ... common/errorHandler.s
+	@echo ... functions/expressionCalculation.obj
+	@echo ... functions/expressionCalculation.i
+	@echo ... functions/expressionCalculation.s
+	@echo ... functions/polyCalculation.obj
+	@echo ... functions/polyCalculation.i
+	@echo ... functions/polyCalculation.s
 	@echo ... linkList.obj
 	@echo ... linkList.i
 	@echo ... linkList.s

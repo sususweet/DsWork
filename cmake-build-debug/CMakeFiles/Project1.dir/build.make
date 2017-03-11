@@ -152,12 +152,87 @@ CMakeFiles/Project1.dir/polynomial.c.obj.provides: CMakeFiles/Project1.dir/polyn
 CMakeFiles/Project1.dir/polynomial.c.obj.provides.build: CMakeFiles/Project1.dir/polynomial.c.obj
 
 
+CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../functions/polyCalculation.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Project1.dir/functions/polyCalculation.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\functions\polyCalculation.c.obj   -c I:\DatabaseStructure\Project1\functions\polyCalculation.c
+
+CMakeFiles/Project1.dir/functions/polyCalculation.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/functions/polyCalculation.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\functions\polyCalculation.c > CMakeFiles\Project1.dir\functions\polyCalculation.c.i
+
+CMakeFiles/Project1.dir/functions/polyCalculation.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/functions/polyCalculation.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\functions\polyCalculation.c -o CMakeFiles\Project1.dir\functions\polyCalculation.c.s
+
+CMakeFiles/Project1.dir/functions/polyCalculation.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/functions/polyCalculation.c.obj.requires
+
+CMakeFiles/Project1.dir/functions/polyCalculation.c.obj.provides: CMakeFiles/Project1.dir/functions/polyCalculation.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/polyCalculation.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/functions/polyCalculation.c.obj.provides
+
+CMakeFiles/Project1.dir/functions/polyCalculation.c.obj.provides.build: CMakeFiles/Project1.dir/functions/polyCalculation.c.obj
+
+
+CMakeFiles/Project1.dir/common/errorHandler.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/common/errorHandler.c.obj: ../common/errorHandler.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Project1.dir/common/errorHandler.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\common\errorHandler.c.obj   -c I:\DatabaseStructure\Project1\common\errorHandler.c
+
+CMakeFiles/Project1.dir/common/errorHandler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/common/errorHandler.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\common\errorHandler.c > CMakeFiles\Project1.dir\common\errorHandler.c.i
+
+CMakeFiles/Project1.dir/common/errorHandler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/common/errorHandler.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\common\errorHandler.c -o CMakeFiles\Project1.dir\common\errorHandler.c.s
+
+CMakeFiles/Project1.dir/common/errorHandler.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/common/errorHandler.c.obj.requires
+
+CMakeFiles/Project1.dir/common/errorHandler.c.obj.provides: CMakeFiles/Project1.dir/common/errorHandler.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/common/errorHandler.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/common/errorHandler.c.obj.provides
+
+CMakeFiles/Project1.dir/common/errorHandler.c.obj.provides.build: CMakeFiles/Project1.dir/common/errorHandler.c.obj
+
+
+CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../functions/expressionCalculation.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\functions\expressionCalculation.c.obj   -c I:\DatabaseStructure\Project1\functions\expressionCalculation.c
+
+CMakeFiles/Project1.dir/functions/expressionCalculation.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/functions/expressionCalculation.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\functions\expressionCalculation.c > CMakeFiles\Project1.dir\functions\expressionCalculation.c.i
+
+CMakeFiles/Project1.dir/functions/expressionCalculation.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/functions/expressionCalculation.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\functions\expressionCalculation.c -o CMakeFiles\Project1.dir\functions\expressionCalculation.c.s
+
+CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj.requires
+
+CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj.provides: CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj.provides
+
+CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj.provides.build: CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj
+
+
 # Object files for target Project1
 Project1_OBJECTS = \
 "CMakeFiles/Project1.dir/main.c.obj" \
 "CMakeFiles/Project1.dir/arrayList.c.obj" \
 "CMakeFiles/Project1.dir/linkList.c.obj" \
-"CMakeFiles/Project1.dir/polynomial.c.obj"
+"CMakeFiles/Project1.dir/polynomial.c.obj" \
+"CMakeFiles/Project1.dir/functions/polyCalculation.c.obj" \
+"CMakeFiles/Project1.dir/common/errorHandler.c.obj" \
+"CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj"
 
 # External object files for target Project1
 Project1_EXTERNAL_OBJECTS =
@@ -166,11 +241,14 @@ Project1.exe: CMakeFiles/Project1.dir/main.c.obj
 Project1.exe: CMakeFiles/Project1.dir/arrayList.c.obj
 Project1.exe: CMakeFiles/Project1.dir/linkList.c.obj
 Project1.exe: CMakeFiles/Project1.dir/polynomial.c.obj
+Project1.exe: CMakeFiles/Project1.dir/functions/polyCalculation.c.obj
+Project1.exe: CMakeFiles/Project1.dir/common/errorHandler.c.obj
+Project1.exe: CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj
 Project1.exe: CMakeFiles/Project1.dir/build.make
 Project1.exe: CMakeFiles/Project1.dir/linklibs.rsp
 Project1.exe: CMakeFiles/Project1.dir/objects1.rsp
 Project1.exe: CMakeFiles/Project1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Project1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable Project1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -182,6 +260,9 @@ CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/main.c.obj.requires
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/arrayList.c.obj.requires
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/linkList.c.obj.requires
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/polynomial.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/functions/polyCalculation.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/common/errorHandler.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj.requires
 
 .PHONY : CMakeFiles/Project1.dir/requires
 

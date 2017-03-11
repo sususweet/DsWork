@@ -32,6 +32,8 @@ LinkListEntry* linkList_getBefore(LinkListEntry* linkList, LinkListEntry* index)
 
 LinkListEntry* linkList_getAfter(LinkListEntry* index);
 
+LinkListEntry* linkList_getFirstNode(LinkListEntry* linkList);
+
 LinkListEntry* linkList_getLastNode(LinkListEntry* linkList);
 
 unsigned int linkList_getLength(LinkListEntry* linkList);
@@ -42,11 +44,18 @@ LinkListEntry* linkList_getIndexEntryByData(LinkListEntry* linkList, LinkListVal
 
 LinkListEntry* linkList_addNode(LinkListEntry* insertIndex, LinkListValue* data);
 
+LinkListEntry* linkList_prependNode(LinkListEntry* linkList, LinkListValue* data);
+
 LinkListEntry* linkList_appendNode(LinkListEntry* linkList, LinkListValue* data);
 
-int linkList_deleteNode(LinkListEntry* deleteIndex, LinkListEntry* linkList);
+int linkList_deleteNode(LinkListEntry* linkList,LinkListEntry* deleteIndex);
 
 
+LinkListEntry* linkList_push(LinkListEntry* linkList, LinkListValue* data);
+
+LinkListValue linkList_pop(LinkListEntry* linkList);
+
+LinkListValue linkList_peek(LinkListEntry* linkList);
 
 #ifdef __cplusplus
 }
