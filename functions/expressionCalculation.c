@@ -32,6 +32,7 @@ int expCalculation(){
     double* result = NULL;
     while (1){
         puts("请输入您要计算的表达式:");
+        fflush (stdin);
         gets(exp);
         strcpy(exp_temp, exp);
         strcat(expReform, exp);//给表达式之前加0+，以防止表达式以-开头的情况出现而程序出错
