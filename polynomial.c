@@ -12,18 +12,21 @@
                 printf("%s,%d 请求内存失败！\n",__FILE__,__LINE__);\
                 return NULL;}
 
+/*多项式对于符号的处理*/
 char poly_judgePositive(int coefficient){
     if (coefficient<0){
         return '-';
     }else return '+';
 }
 
+/*初始化多项式的项*/
 PolyNode* poly_initItem(){
     PolyNode* poly_tmp = (PolyNode*) malloc(sizeof(poly_tmp));
     Asert(poly_tmp);
     return poly_tmp;
 }
 
+/*从键盘获得多项式*/
 LinkListEntry* poly_getPoly(){
     int exp_temp,coe_tmp;
     char lf;
@@ -49,6 +52,7 @@ LinkListEntry* poly_getPoly(){
     return polyList;
 }
 
+/*显示多项式*/
 void poly_showPoly(LinkListEntry* polyList){
     if(linkList_getLength(polyList) == 0) {
         printf("The polyList is empty.\n");
@@ -64,6 +68,7 @@ void poly_showPoly(LinkListEntry* polyList){
     }
 }
 
+/*多项式合并同类项*/
 LinkListEntry* poly_mergePoly(LinkListEntry* polyList){
     LinkListEntry *polyCache1, *polyCache2, *polyListTemp;
     polyListTemp = polyList;
@@ -88,6 +93,7 @@ LinkListEntry* poly_mergePoly(LinkListEntry* polyList){
     return polyListTemp;
 }
 
+/*多项式指数比较*/
 int poly_compare(int exponent1, int exponent2){
     if (exponent1 == exponent2){
         return 0;
@@ -95,6 +101,7 @@ int poly_compare(int exponent1, int exponent2){
     else if (exponent1 < exponent2) return -1;
 }
 
+/*多项式降幂排列*/
 LinkListEntry* poly_sortPoly(LinkListEntry* polyList){
     LinkListEntry *polyCache1, *polyCache2, *polyListTemp;
     polyListTemp = polyList;
@@ -116,7 +123,7 @@ LinkListEntry* poly_sortPoly(LinkListEntry* polyList){
     return polyListTemp;
 }
 
-
+/*多项式加法*/
 LinkListEntry* poly_plusPoly(LinkListEntry* poly1, LinkListEntry* poly2){
     if(linkList_getLength(poly1) == 0 || linkList_getLength(poly2) == 0) {
         printf("poly_plusPoly:The polyList is empty.\n");
@@ -147,7 +154,7 @@ LinkListEntry* poly_plusPoly(LinkListEntry* poly1, LinkListEntry* poly2){
             polyCache2 = polyCache2 ->next;
         }
     }
-    while(polyCache1 != NULL){ //两个多项式链表均还有数据
+    while(polyCache1 != NULL){
         PolyNode* newNode = poly_initItem();
         PolyNode* polyNode1 = polyCache1->data;
         newNode -> exponent = polyNode1-> exponent;
@@ -155,7 +162,7 @@ LinkListEntry* poly_plusPoly(LinkListEntry* poly1, LinkListEntry* poly2){
         linkList_appendNode(polyResult, newNode);
         polyCache1 = polyCache1 -> next;
     }
-    while(polyCache2 != NULL){ //两个多项式链表均还有数据
+    while(polyCache2 != NULL){
         PolyNode* newNode = poly_initItem();
         PolyNode* polyNode2 = polyCache2->data;
         newNode -> exponent = polyNode2-> exponent;
@@ -166,6 +173,7 @@ LinkListEntry* poly_plusPoly(LinkListEntry* poly1, LinkListEntry* poly2){
     return polyResult;
 }
 
+/*多项式乘法*/
 LinkListEntry* poly_multiPoly(LinkListEntry* poly1, LinkListEntry* poly2){
     if(linkList_getLength(poly1) == 0 || linkList_getLength(poly2) == 0) {
         printf("poly_multiPoly:The polyList is empty.\n");

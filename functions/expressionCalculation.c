@@ -4,35 +4,41 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 #include <math.h>
+#include <stdlib.h>
 #include "expressionCalculation.h"
 
-/*检查是否成功申请内存*/
+//检查是否成功申请内存
 #define Asert(par) if(par==NULL) {\
                 printf("%s,%d 请求内存失败！\n",__FILE__,__LINE__);\
                 return NULL;}
 
+//申请计算器存储值的内存空间
 LinkListValue linkListValue_init(){
     LinkListValue linkListValue_tmp = (LinkListValue) malloc(sizeof(LinkListValue));
     Asert(linkListValue_tmp);
     return linkListValue_tmp;
 }
 
+//C语言计算器主函数
 int expCalculation(){
     printf("欢迎使用C语言简易计算器\n");
     printf("CopyRight @2017 sususweet. All rights reserved.\n");
     printf("\n");
-    char exp[1000]; /* 存储输入的表达式字符串 */
+    /* 存储输入的表达式字符串 */
+    char exp[1000];
     char exp_temp[1000];
+    char expReform[1003] = "0+";
     double* result = NULL;
     while (1){
         puts("请输入您要计算的表达式:");
         gets(exp);
-        strcpy(exp_temp,exp);
-        result = expCal(exp);
+        strcpy(exp_temp, exp);
+        strcat(expReform, exp);//给表达式之前加0+，以防止表达式以-开头的情况出现而程序出错
+        result = expCal(expReform);
+        /*错误处理，防止输入不合法时程序崩溃*/
         if (result == NULL){
-            printf("计算出错，请检查表达式并重新输入!\n");
+            printf("计算出错，请检查表达式并重新输入!括号中不能包括单一表达式\n");
         } else{
             break;
         }
@@ -43,6 +49,7 @@ int expCalculation(){
     return 0;
 }
 
+//C语言计算器表达式计算函数（核心函数）
 double* expCal(char* exp){
     LinkListEntry *numStack = linkList_initList();
     LinkListEntry *doubleOperateStack = linkList_initList();
@@ -58,9 +65,12 @@ double* expCal(char* exp){
     int i = 0;
     int isNegative = 0;
     while(i < length){
-    //while((*(exp + i)) != '\0') {
+    //也可以写成：while((*(exp + i)) != '\0') {
         char expTemp = *(exp + i);
             if (expTemp == ' ') {/* 跳过空格 */
+                i++;
+                continue;
+            } else if (expTemp == '-' && isNegative == 1) {/* 处理负号的有关逻辑 */
                 i++;
                 continue;
             } else if (expTemp == '(') { /* 处理左括号 */
@@ -106,16 +116,19 @@ double* expCal(char* exp){
                 i++;
             } else {  /* 处理运算符 */
                 LinkListValue operationTop = linkList_peek(doubleOperateStack);/* 栈顶的算符 */
-                if (*(exp + i + 1) == '-') {
+                if (*(exp + i + 1) == '-') {/*判断下一个运算符是否为'-'，进而处理负数*/
                     isNegative = 1;
-                    i++;
+                    /*此处不能对i的位置进行操作，以防止漏读运算符*/
                 }
-                if (getPriority((char) operationTop) >= getPriority(expTemp) && isNegative == 0) { /* 比较两个运算符的优先级 */
+
+                if (getPriority((char) operationTop) >= getPriority(expTemp)) { /* 比较两个运算符的优先级 */
                     /* 从算子栈中退出两个算子 */
-                    double value2 = *(double *) linkList_pop(numStack);
-                    double value1 = *(double *) linkList_pop(numStack);
+                    double* value2 = (double *) linkList_pop(numStack);
+                    double* value1 = (double *) linkList_pop(numStack);
+                    /*错误处理，防止输入不合法时程序崩溃*/
+                    if (value1 == NULL || value2 == NULL) return NULL;
                     calResult = linkListValue_init();
-                    *(double *) calResult = numDoubleCal(value1, value2, (char) operationTop);
+                    *(double *) calResult = numDoubleCal(*value1, *value2, (char) operationTop);
                     linkList_push(numStack, calResult);    /* 计算结果压入栈中 */
                     linkList_pop(doubleOperateStack); /* 从算符栈中退栈 */
                 } else {
@@ -128,11 +141,12 @@ double* expCal(char* exp){
 
 
     /* 弹出算符栈中的所有算符，并计算 */
-    while((char) linkList_peek(doubleOperateStack) != '#') {
-        LinkListValue operationTop = linkList_peek(doubleOperateStack);/* 栈顶的算符 */
+    LinkListValue operationTop;
+    while((char) (operationTop = linkList_peek(doubleOperateStack)) != '#') {/* 栈顶的算符 */
         /* 从算子栈中退出两个算子 */
         double* value2 = linkList_pop(numStack);
         double* value1 = linkList_pop(numStack);
+        /*错误处理，防止输入不合法时程序崩溃*/
         if (value2 == NULL || value1 == NULL) return NULL;
         calResult = linkListValue_init();
         *(double *) calResult = numDoubleCal(*value1, *value2, (char) operationTop);
@@ -140,11 +154,12 @@ double* expCal(char* exp){
         linkList_pop(doubleOperateStack); /* 从算符栈中退栈 */
     }
     numTemp = linkList_pop(numStack);
-    if (numTemp==NULL) return NULL;
+    /*错误处理，防止输入不合法时程序崩溃*/
+    if (numTemp == NULL) return NULL;
     else return (double *) numTemp;
 }
 
-/*字符串替换*/
+//字符串替换，以识别输入的sin、cos等三角函数计算符
 char* shortenExpression(char* exp){
     strReplace(exp,"sin", "s");
     strReplace(exp,"cos", "c");
@@ -153,6 +168,7 @@ char* shortenExpression(char* exp){
     return exp;
 }
 
+//双目运算符计算
 double numDoubleCal(double val1, double val2, char op) {
     switch(op) {
         case '+':
@@ -163,6 +179,8 @@ double numDoubleCal(double val1, double val2, char op) {
             return (val1*val2);
         case '/':
             return (val1/val2);
+        case '%':
+            return ((int)val1 % (int)val2); //强制转换类型，防止计算出错
         case '^':
             return pow(val1,val2);
         default:
@@ -170,6 +188,7 @@ double numDoubleCal(double val1, double val2, char op) {
     }
 }
 
+//单目运算符计算
 double numSingleCal(double val1, char op) {
     switch(op) {
         case 's':
@@ -185,6 +204,7 @@ double numSingleCal(double val1, char op) {
     }
 }
 
+//获取运算符优先级，#优先级最低，防止被弹出算符栈，也标记着运算结束
 int getPriority(char op) {
     switch(op) {
         case '^':
@@ -208,6 +228,7 @@ int getPriority(char op) {
     }
 }
 
+//字符串替换函数
 char* strReplace(char originalString[], char key[], char swap[]){
     int lengthOfOriginalString, lengthOfKey, lengthOfSwap, i, j , flag;
     char tmp[1000];
@@ -217,7 +238,7 @@ char* strReplace(char originalString[], char key[], char swap[]){
     lengthOfKey =  (int)strlen(key);
     lengthOfSwap =  (int)strlen(swap);
 
-    for( i = 0; i <= lengthOfOriginalString - lengthOfKey; i++){
+    for(i = 0; i <= lengthOfOriginalString - lengthOfKey; i++){
         flag = 1;
         //搜索key
         for(j  = 0; j < lengthOfKey; j ++){
