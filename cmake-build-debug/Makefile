@@ -122,33 +122,6 @@ Project1/fast:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/build
 .PHONY : Project1/fast
 
-arrayList.obj: arrayList.c.obj
-
-.PHONY : arrayList.obj
-
-# target to build an object file
-arrayList.c.obj:
-	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/arrayList.c.obj
-.PHONY : arrayList.c.obj
-
-arrayList.i: arrayList.c.i
-
-.PHONY : arrayList.i
-
-# target to preprocess a source file
-arrayList.c.i:
-	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/arrayList.c.i
-.PHONY : arrayList.c.i
-
-arrayList.s: arrayList.c.s
-
-.PHONY : arrayList.s
-
-# target to generate assembly for a file
-arrayList.c.s:
-	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/arrayList.c.s
-.PHONY : arrayList.c.s
-
 common/errorHandler.obj: common/errorHandler.c.obj
 
 .PHONY : common/errorHandler.obj
@@ -230,33 +203,6 @@ functions/polyCalculation.c.s:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/polyCalculation.c.s
 .PHONY : functions/polyCalculation.c.s
 
-linkList.obj: linkList.c.obj
-
-.PHONY : linkList.obj
-
-# target to build an object file
-linkList.c.obj:
-	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/linkList.c.obj
-.PHONY : linkList.c.obj
-
-linkList.i: linkList.c.i
-
-.PHONY : linkList.i
-
-# target to preprocess a source file
-linkList.c.i:
-	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/linkList.c.i
-.PHONY : linkList.c.i
-
-linkList.s: linkList.c.s
-
-.PHONY : linkList.s
-
-# target to generate assembly for a file
-linkList.c.s:
-	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/linkList.c.s
-.PHONY : linkList.c.s
-
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -284,32 +230,113 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/main.c.s
 .PHONY : main.c.s
 
-polynomial.obj: polynomial.c.obj
+structure/arrayList.obj: structure/arrayList.c.obj
 
-.PHONY : polynomial.obj
+.PHONY : structure/arrayList.obj
 
 # target to build an object file
-polynomial.c.obj:
-	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/polynomial.c.obj
-.PHONY : polynomial.c.obj
+structure/arrayList.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/arrayList.c.obj
+.PHONY : structure/arrayList.c.obj
 
-polynomial.i: polynomial.c.i
+structure/arrayList.i: structure/arrayList.c.i
 
-.PHONY : polynomial.i
+.PHONY : structure/arrayList.i
 
 # target to preprocess a source file
-polynomial.c.i:
-	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/polynomial.c.i
-.PHONY : polynomial.c.i
+structure/arrayList.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/arrayList.c.i
+.PHONY : structure/arrayList.c.i
 
-polynomial.s: polynomial.c.s
+structure/arrayList.s: structure/arrayList.c.s
 
-.PHONY : polynomial.s
+.PHONY : structure/arrayList.s
 
 # target to generate assembly for a file
-polynomial.c.s:
-	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/polynomial.c.s
-.PHONY : polynomial.c.s
+structure/arrayList.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/arrayList.c.s
+.PHONY : structure/arrayList.c.s
+
+structure/linkList.obj: structure/linkList.c.obj
+
+.PHONY : structure/linkList.obj
+
+# target to build an object file
+structure/linkList.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/linkList.c.obj
+.PHONY : structure/linkList.c.obj
+
+structure/linkList.i: structure/linkList.c.i
+
+.PHONY : structure/linkList.i
+
+# target to preprocess a source file
+structure/linkList.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/linkList.c.i
+.PHONY : structure/linkList.c.i
+
+structure/linkList.s: structure/linkList.c.s
+
+.PHONY : structure/linkList.s
+
+# target to generate assembly for a file
+structure/linkList.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/linkList.c.s
+.PHONY : structure/linkList.c.s
+
+structure/orthogonalList.obj: structure/orthogonalList.c.obj
+
+.PHONY : structure/orthogonalList.obj
+
+# target to build an object file
+structure/orthogonalList.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/orthogonalList.c.obj
+.PHONY : structure/orthogonalList.c.obj
+
+structure/orthogonalList.i: structure/orthogonalList.c.i
+
+.PHONY : structure/orthogonalList.i
+
+# target to preprocess a source file
+structure/orthogonalList.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/orthogonalList.c.i
+.PHONY : structure/orthogonalList.c.i
+
+structure/orthogonalList.s: structure/orthogonalList.c.s
+
+.PHONY : structure/orthogonalList.s
+
+# target to generate assembly for a file
+structure/orthogonalList.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/orthogonalList.c.s
+.PHONY : structure/orthogonalList.c.s
+
+structure/polynomial.obj: structure/polynomial.c.obj
+
+.PHONY : structure/polynomial.obj
+
+# target to build an object file
+structure/polynomial.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/polynomial.c.obj
+.PHONY : structure/polynomial.c.obj
+
+structure/polynomial.i: structure/polynomial.c.i
+
+.PHONY : structure/polynomial.i
+
+# target to preprocess a source file
+structure/polynomial.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/polynomial.c.i
+.PHONY : structure/polynomial.c.i
+
+structure/polynomial.s: structure/polynomial.c.s
+
+.PHONY : structure/polynomial.s
+
+# target to generate assembly for a file
+structure/polynomial.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/polynomial.c.s
+.PHONY : structure/polynomial.c.s
 
 # Help Target
 help:
@@ -320,9 +347,6 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Project1
 	@echo ... edit_cache
-	@echo ... arrayList.obj
-	@echo ... arrayList.i
-	@echo ... arrayList.s
 	@echo ... common/errorHandler.obj
 	@echo ... common/errorHandler.i
 	@echo ... common/errorHandler.s
@@ -332,15 +356,21 @@ help:
 	@echo ... functions/polyCalculation.obj
 	@echo ... functions/polyCalculation.i
 	@echo ... functions/polyCalculation.s
-	@echo ... linkList.obj
-	@echo ... linkList.i
-	@echo ... linkList.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... polynomial.obj
-	@echo ... polynomial.i
-	@echo ... polynomial.s
+	@echo ... structure/arrayList.obj
+	@echo ... structure/arrayList.i
+	@echo ... structure/arrayList.s
+	@echo ... structure/linkList.obj
+	@echo ... structure/linkList.i
+	@echo ... structure/linkList.s
+	@echo ... structure/orthogonalList.obj
+	@echo ... structure/orthogonalList.i
+	@echo ... structure/orthogonalList.s
+	@echo ... structure/polynomial.obj
+	@echo ... structure/polynomial.i
+	@echo ... structure/polynomial.s
 .PHONY : help
 
 

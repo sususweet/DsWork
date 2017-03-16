@@ -80,76 +80,76 @@ CMakeFiles/Project1.dir/main.c.obj.provides: CMakeFiles/Project1.dir/main.c.obj.
 CMakeFiles/Project1.dir/main.c.obj.provides.build: CMakeFiles/Project1.dir/main.c.obj
 
 
-CMakeFiles/Project1.dir/arrayList.c.obj: CMakeFiles/Project1.dir/flags.make
-CMakeFiles/Project1.dir/arrayList.c.obj: ../arrayList.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Project1.dir/arrayList.c.obj"
-	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\arrayList.c.obj   -c I:\DatabaseStructure\Project1\arrayList.c
+CMakeFiles/Project1.dir/structure/arrayList.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/structure/arrayList.c.obj: ../structure/arrayList.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Project1.dir/structure/arrayList.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\structure\arrayList.c.obj   -c I:\DatabaseStructure\Project1\structure\arrayList.c
 
-CMakeFiles/Project1.dir/arrayList.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/arrayList.c.i"
-	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\arrayList.c > CMakeFiles\Project1.dir\arrayList.c.i
+CMakeFiles/Project1.dir/structure/arrayList.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/structure/arrayList.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\structure\arrayList.c > CMakeFiles\Project1.dir\structure\arrayList.c.i
 
-CMakeFiles/Project1.dir/arrayList.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/arrayList.c.s"
-	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\arrayList.c -o CMakeFiles\Project1.dir\arrayList.c.s
+CMakeFiles/Project1.dir/structure/arrayList.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/structure/arrayList.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\structure\arrayList.c -o CMakeFiles\Project1.dir\structure\arrayList.c.s
 
-CMakeFiles/Project1.dir/arrayList.c.obj.requires:
+CMakeFiles/Project1.dir/structure/arrayList.c.obj.requires:
 
-.PHONY : CMakeFiles/Project1.dir/arrayList.c.obj.requires
+.PHONY : CMakeFiles/Project1.dir/structure/arrayList.c.obj.requires
 
-CMakeFiles/Project1.dir/arrayList.c.obj.provides: CMakeFiles/Project1.dir/arrayList.c.obj.requires
-	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/arrayList.c.obj.provides.build
-.PHONY : CMakeFiles/Project1.dir/arrayList.c.obj.provides
+CMakeFiles/Project1.dir/structure/arrayList.c.obj.provides: CMakeFiles/Project1.dir/structure/arrayList.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/arrayList.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/structure/arrayList.c.obj.provides
 
-CMakeFiles/Project1.dir/arrayList.c.obj.provides.build: CMakeFiles/Project1.dir/arrayList.c.obj
-
-
-CMakeFiles/Project1.dir/linkList.c.obj: CMakeFiles/Project1.dir/flags.make
-CMakeFiles/Project1.dir/linkList.c.obj: ../linkList.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Project1.dir/linkList.c.obj"
-	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\linkList.c.obj   -c I:\DatabaseStructure\Project1\linkList.c
-
-CMakeFiles/Project1.dir/linkList.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/linkList.c.i"
-	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\linkList.c > CMakeFiles\Project1.dir\linkList.c.i
-
-CMakeFiles/Project1.dir/linkList.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/linkList.c.s"
-	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\linkList.c -o CMakeFiles\Project1.dir\linkList.c.s
-
-CMakeFiles/Project1.dir/linkList.c.obj.requires:
-
-.PHONY : CMakeFiles/Project1.dir/linkList.c.obj.requires
-
-CMakeFiles/Project1.dir/linkList.c.obj.provides: CMakeFiles/Project1.dir/linkList.c.obj.requires
-	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/linkList.c.obj.provides.build
-.PHONY : CMakeFiles/Project1.dir/linkList.c.obj.provides
-
-CMakeFiles/Project1.dir/linkList.c.obj.provides.build: CMakeFiles/Project1.dir/linkList.c.obj
+CMakeFiles/Project1.dir/structure/arrayList.c.obj.provides.build: CMakeFiles/Project1.dir/structure/arrayList.c.obj
 
 
-CMakeFiles/Project1.dir/polynomial.c.obj: CMakeFiles/Project1.dir/flags.make
-CMakeFiles/Project1.dir/polynomial.c.obj: ../polynomial.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Project1.dir/polynomial.c.obj"
-	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\polynomial.c.obj   -c I:\DatabaseStructure\Project1\polynomial.c
+CMakeFiles/Project1.dir/structure/linkList.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/structure/linkList.c.obj: ../structure/linkList.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Project1.dir/structure/linkList.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\structure\linkList.c.obj   -c I:\DatabaseStructure\Project1\structure\linkList.c
 
-CMakeFiles/Project1.dir/polynomial.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/polynomial.c.i"
-	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\polynomial.c > CMakeFiles\Project1.dir\polynomial.c.i
+CMakeFiles/Project1.dir/structure/linkList.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/structure/linkList.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\structure\linkList.c > CMakeFiles\Project1.dir\structure\linkList.c.i
 
-CMakeFiles/Project1.dir/polynomial.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/polynomial.c.s"
-	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\polynomial.c -o CMakeFiles\Project1.dir\polynomial.c.s
+CMakeFiles/Project1.dir/structure/linkList.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/structure/linkList.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\structure\linkList.c -o CMakeFiles\Project1.dir\structure\linkList.c.s
 
-CMakeFiles/Project1.dir/polynomial.c.obj.requires:
+CMakeFiles/Project1.dir/structure/linkList.c.obj.requires:
 
-.PHONY : CMakeFiles/Project1.dir/polynomial.c.obj.requires
+.PHONY : CMakeFiles/Project1.dir/structure/linkList.c.obj.requires
 
-CMakeFiles/Project1.dir/polynomial.c.obj.provides: CMakeFiles/Project1.dir/polynomial.c.obj.requires
-	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/polynomial.c.obj.provides.build
-.PHONY : CMakeFiles/Project1.dir/polynomial.c.obj.provides
+CMakeFiles/Project1.dir/structure/linkList.c.obj.provides: CMakeFiles/Project1.dir/structure/linkList.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/linkList.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/structure/linkList.c.obj.provides
 
-CMakeFiles/Project1.dir/polynomial.c.obj.provides.build: CMakeFiles/Project1.dir/polynomial.c.obj
+CMakeFiles/Project1.dir/structure/linkList.c.obj.provides.build: CMakeFiles/Project1.dir/structure/linkList.c.obj
+
+
+CMakeFiles/Project1.dir/structure/polynomial.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/structure/polynomial.c.obj: ../structure/polynomial.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Project1.dir/structure/polynomial.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\structure\polynomial.c.obj   -c I:\DatabaseStructure\Project1\structure\polynomial.c
+
+CMakeFiles/Project1.dir/structure/polynomial.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/structure/polynomial.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\structure\polynomial.c > CMakeFiles\Project1.dir\structure\polynomial.c.i
+
+CMakeFiles/Project1.dir/structure/polynomial.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/structure/polynomial.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\structure\polynomial.c -o CMakeFiles\Project1.dir\structure\polynomial.c.s
+
+CMakeFiles/Project1.dir/structure/polynomial.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/structure/polynomial.c.obj.requires
+
+CMakeFiles/Project1.dir/structure/polynomial.c.obj.provides: CMakeFiles/Project1.dir/structure/polynomial.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/polynomial.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/structure/polynomial.c.obj.provides
+
+CMakeFiles/Project1.dir/structure/polynomial.c.obj.provides.build: CMakeFiles/Project1.dir/structure/polynomial.c.obj
 
 
 CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: CMakeFiles/Project1.dir/flags.make
@@ -224,31 +224,57 @@ CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj.provides: CMakeFil
 CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj.provides.build: CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj
 
 
+CMakeFiles/Project1.dir/structure/orthogonalList.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/structure/orthogonalList.c.obj: ../structure/orthogonalList.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Project1.dir/structure/orthogonalList.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\structure\orthogonalList.c.obj   -c I:\DatabaseStructure\Project1\structure\orthogonalList.c
+
+CMakeFiles/Project1.dir/structure/orthogonalList.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/structure/orthogonalList.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\structure\orthogonalList.c > CMakeFiles\Project1.dir\structure\orthogonalList.c.i
+
+CMakeFiles/Project1.dir/structure/orthogonalList.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/structure/orthogonalList.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\structure\orthogonalList.c -o CMakeFiles\Project1.dir\structure\orthogonalList.c.s
+
+CMakeFiles/Project1.dir/structure/orthogonalList.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/structure/orthogonalList.c.obj.requires
+
+CMakeFiles/Project1.dir/structure/orthogonalList.c.obj.provides: CMakeFiles/Project1.dir/structure/orthogonalList.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/orthogonalList.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/structure/orthogonalList.c.obj.provides
+
+CMakeFiles/Project1.dir/structure/orthogonalList.c.obj.provides.build: CMakeFiles/Project1.dir/structure/orthogonalList.c.obj
+
+
 # Object files for target Project1
 Project1_OBJECTS = \
 "CMakeFiles/Project1.dir/main.c.obj" \
-"CMakeFiles/Project1.dir/arrayList.c.obj" \
-"CMakeFiles/Project1.dir/linkList.c.obj" \
-"CMakeFiles/Project1.dir/polynomial.c.obj" \
+"CMakeFiles/Project1.dir/structure/arrayList.c.obj" \
+"CMakeFiles/Project1.dir/structure/linkList.c.obj" \
+"CMakeFiles/Project1.dir/structure/polynomial.c.obj" \
 "CMakeFiles/Project1.dir/functions/polyCalculation.c.obj" \
 "CMakeFiles/Project1.dir/common/errorHandler.c.obj" \
-"CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj"
+"CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj" \
+"CMakeFiles/Project1.dir/structure/orthogonalList.c.obj"
 
 # External object files for target Project1
 Project1_EXTERNAL_OBJECTS =
 
 Project1.exe: CMakeFiles/Project1.dir/main.c.obj
-Project1.exe: CMakeFiles/Project1.dir/arrayList.c.obj
-Project1.exe: CMakeFiles/Project1.dir/linkList.c.obj
-Project1.exe: CMakeFiles/Project1.dir/polynomial.c.obj
+Project1.exe: CMakeFiles/Project1.dir/structure/arrayList.c.obj
+Project1.exe: CMakeFiles/Project1.dir/structure/linkList.c.obj
+Project1.exe: CMakeFiles/Project1.dir/structure/polynomial.c.obj
 Project1.exe: CMakeFiles/Project1.dir/functions/polyCalculation.c.obj
 Project1.exe: CMakeFiles/Project1.dir/common/errorHandler.c.obj
 Project1.exe: CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj
+Project1.exe: CMakeFiles/Project1.dir/structure/orthogonalList.c.obj
 Project1.exe: CMakeFiles/Project1.dir/build.make
 Project1.exe: CMakeFiles/Project1.dir/linklibs.rsp
 Project1.exe: CMakeFiles/Project1.dir/objects1.rsp
 Project1.exe: CMakeFiles/Project1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable Project1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable Project1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -257,12 +283,13 @@ CMakeFiles/Project1.dir/build: Project1.exe
 .PHONY : CMakeFiles/Project1.dir/build
 
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/main.c.obj.requires
-CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/arrayList.c.obj.requires
-CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/linkList.c.obj.requires
-CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/polynomial.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/structure/arrayList.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/structure/linkList.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/structure/polynomial.c.obj.requires
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/functions/polyCalculation.c.obj.requires
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/common/errorHandler.c.obj.requires
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/structure/orthogonalList.c.obj.requires
 
 .PHONY : CMakeFiles/Project1.dir/requires
 

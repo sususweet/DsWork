@@ -9,7 +9,7 @@
 extern "C" {
 #endif
 
-#include "../linkList.h"
+#include "../structure/linkList.h"
 
 int expCalculation();
 

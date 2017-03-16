@@ -82,12 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="I:/DatabaseStructure/Project1/arrayList.c">
-			<Option target="Project1"/>
-		</Unit>
-		<Unit filename="I:/DatabaseStructure/Project1/arrayList.h">
-			<Option target="Project1"/>
-		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/common/errorHandler.c">
 			<Option target="Project1"/>
 		</Unit>
@@ -106,19 +100,31 @@
 		<Unit filename="I:/DatabaseStructure/Project1/functions/polyCalculation.h">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="I:/DatabaseStructure/Project1/linkList.c">
-			<Option target="Project1"/>
-		</Unit>
-		<Unit filename="I:/DatabaseStructure/Project1/linkList.h">
-			<Option target="Project1"/>
-		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/main.c">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="I:/DatabaseStructure/Project1/polynomial.c">
+		<Unit filename="I:/DatabaseStructure/Project1/structure/arrayList.c">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="I:/DatabaseStructure/Project1/polynomial.h">
+		<Unit filename="I:/DatabaseStructure/Project1/structure/arrayList.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/structure/linkList.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/structure/linkList.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/structure/orthogonalList.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/structure/orthogonalList.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/structure/polynomial.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/structure/polynomial.h">
 			<Option target="Project1"/>
 		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/CMakeLists.txt">

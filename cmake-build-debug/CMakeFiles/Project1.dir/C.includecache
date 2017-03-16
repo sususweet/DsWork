@@ -8,18 +8,6 @@
 
 I:/DatabaseStructure/Project1/./functions/polyCalculation.h
 
-I:/DatabaseStructure/Project1/arrayList.c
-stdlib.h
--
-stdio.h
--
-arrayList.h
-I:/DatabaseStructure/Project1/arrayList.h
-string.h
-I:/DatabaseStructure/Project1/string.h
-
-I:/DatabaseStructure/Project1/arrayList.h
-
 I:/DatabaseStructure/Project1/common/errorHandler.c
 
 I:/DatabaseStructure/Project1/functions/expressionCalculation.c
@@ -35,30 +23,20 @@ expressionCalculation.h
 I:/DatabaseStructure/Project1/functions/expressionCalculation.h
 
 I:/DatabaseStructure/Project1/functions/expressionCalculation.h
-../linkList.h
-I:/DatabaseStructure/Project1/linkList.h
+../structure/linkList.h
+I:/DatabaseStructure/Project1/structure/linkList.h
 
 I:/DatabaseStructure/Project1/functions/polyCalculation.c
 stdio.h
 -
-../linkList.h
-I:/DatabaseStructure/Project1/linkList.h
-../polynomial.h
-I:/DatabaseStructure/Project1/polynomial.h
+../structure/linkList.h
+I:/DatabaseStructure/Project1/structure/linkList.h
+../structure/polynomial.h
+I:/DatabaseStructure/Project1/structure/polynomial.h
 polyCalculation.h
 I:/DatabaseStructure/Project1/functions/polyCalculation.h
 
 I:/DatabaseStructure/Project1/functions/polyCalculation.h
-
-I:/DatabaseStructure/Project1/linkList.c
-stdlib.h
--
-stdio.h
--
-linkList.h
-I:/DatabaseStructure/Project1/linkList.h
-
-I:/DatabaseStructure/Project1/linkList.h
 
 I:/DatabaseStructure/Project1/main.c
 stdio.h
@@ -67,24 +45,58 @@ stdlib.h
 -
 math.h
 -
-arrayList.h
-I:/DatabaseStructure/Project1/arrayList.h
-linkList.h
-I:/DatabaseStructure/Project1/linkList.h
+structure/arrayList.h
+I:/DatabaseStructure/Project1/structure/arrayList.h
+structure/linkList.h
+I:/DatabaseStructure/Project1/structure/linkList.h
 ./functions/polyCalculation.h
 I:/DatabaseStructure/Project1/./functions/polyCalculation.h
 functions/expressionCalculation.h
 I:/DatabaseStructure/Project1/functions/expressionCalculation.h
+structure/orthogonalList.h
+I:/DatabaseStructure/Project1/structure/orthogonalList.h
 
-I:/DatabaseStructure/Project1/polynomial.c
+I:/DatabaseStructure/Project1/structure/arrayList.c
+stdlib.h
+-
+stdio.h
+-
+arrayList.h
+I:/DatabaseStructure/Project1/structure/arrayList.h
+string.h
+I:/DatabaseStructure/Project1/structure/string.h
+
+I:/DatabaseStructure/Project1/structure/arrayList.h
+
+I:/DatabaseStructure/Project1/structure/linkList.c
 stdlib.h
 -
 stdio.h
 -
 linkList.h
-I:/DatabaseStructure/Project1/linkList.h
-polynomial.h
-I:/DatabaseStructure/Project1/polynomial.h
+I:/DatabaseStructure/Project1/structure/linkList.h
 
-I:/DatabaseStructure/Project1/polynomial.h
+I:/DatabaseStructure/Project1/structure/linkList.h
+
+I:/DatabaseStructure/Project1/structure/orthogonalList.c
+stdlib.h
+-
+stdio.h
+-
+orthogonalList.h
+I:/DatabaseStructure/Project1/structure/orthogonalList.h
+
+I:/DatabaseStructure/Project1/structure/orthogonalList.h
+
+I:/DatabaseStructure/Project1/structure/polynomial.c
+stdlib.h
+-
+stdio.h
+-
+linkList.h
+I:/DatabaseStructure/Project1/structure/linkList.h
+polynomial.h
+I:/DatabaseStructure/Project1/structure/polynomial.h
+
+I:/DatabaseStructure/Project1/structure/polynomial.h
 

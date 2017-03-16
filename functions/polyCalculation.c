@@ -3,8 +3,8 @@
 //
 
 #include <stdio.h>
-#include "../linkList.h"
-#include "../polynomial.h"
+#include "../structure/linkList.h"
+#include "../structure/polynomial.h"
 #include "polyCalculation.h"
 
 int polyCalculation(){
