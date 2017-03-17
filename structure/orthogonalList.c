@@ -101,16 +101,24 @@ OList* OList_addNode(OList* oList, int row, int col, MatrixValue value){
     while(rowLink->right != NULL && rowLink->col < col) {
         rowLink = rowLink->right;
     }
-    newNode->right = rowLink->right;
-    rowLink->right = newNode;
+    if (rowLink->col == col){
+        rowLink->val = newNode->val;
+    } else{
+        newNode->right = rowLink->right;
+        rowLink->right = newNode;
+    }
 
     //将p插入列链中
     colLink = &(oList->colHead[col]);
     while(colLink->down != NULL && colLink->row < row) {
         colLink = colLink->down;
     }
-    newNode->down = colLink->down;
-    colLink->down = newNode;
+    if (colLink->row == row){
+        colLink->val = newNode->val;
+    } else{
+        newNode->down = colLink->down;
+        colLink->down = newNode;
+    }
 
     oList->nonZeroCount++;
 
@@ -129,7 +137,6 @@ void OList_showOList(OList* oList){
     }
     for (int i = 1; i <= oList->rowCount; i++){
         OLNode* rowLink = oList->rowHead[i].right;
-
         printf("| ");
         for (int j = 1; j <= oList-> colCount; j++){
             if (rowLink && rowLink->col == j){
@@ -204,10 +211,10 @@ OList* OList_multiOList(OList* oList1, OList* oList2){
 
     //矩阵定位开始
     for (int i = 1; i <= rowCount; i++){
-        OLNode* rowLink1 = oList1->rowHead[i].right;
         for (int j = 1; j <= colCount; j++){
+            //注意，这里的rowLink1和colLink2的赋值一定要在两层循环体内，防止接下来的while循环改变其地址导致计算错误
+            OLNode* rowLink1 = oList1->rowHead[i].right;
             OLNode* colLink2 = oList2->colHead[j].down;
-
             //矩阵定位完成
             MatrixValue temp = 0;
 
@@ -218,7 +225,7 @@ OList* OList_multiOList(OList* oList1, OList* oList2){
                 else if(rowLink1->col > colLink2->row)
                     colLink2 = colLink2->down;
                 else {
-                    temp += rowLink1->val*colLink2->val;
+                    temp += rowLink1->val * colLink2->val;
                     rowLink1 = rowLink1->right;
                     colLink2 = colLink2->down;
                 }
