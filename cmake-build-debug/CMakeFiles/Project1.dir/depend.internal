@@ -7,6 +7,10 @@ CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj
  I:/DatabaseStructure/Project1/functions/expressionCalculation.c
  I:/DatabaseStructure/Project1/functions/expressionCalculation.h
  I:/DatabaseStructure/Project1/structure/linkList.h
+CMakeFiles/Project1.dir/functions/matrixCalculation.c.obj
+ I:/DatabaseStructure/Project1/functions/matrixCalculation.c
+ I:/DatabaseStructure/Project1/functions/matrixCalculation.h
+ I:/DatabaseStructure/Project1/structure/orthogonalList.h
 CMakeFiles/Project1.dir/functions/polyCalculation.c.obj
  I:/DatabaseStructure/Project1/functions/polyCalculation.c
  I:/DatabaseStructure/Project1/functions/polyCalculation.h
@@ -15,6 +19,7 @@ CMakeFiles/Project1.dir/functions/polyCalculation.c.obj
 CMakeFiles/Project1.dir/main.c.obj
  I:/DatabaseStructure/Project1/./functions/polyCalculation.h
  I:/DatabaseStructure/Project1/functions/expressionCalculation.h
+ I:/DatabaseStructure/Project1/functions/matrixCalculation.h
  I:/DatabaseStructure/Project1/main.c
  I:/DatabaseStructure/Project1/structure/arrayList.h
  I:/DatabaseStructure/Project1/structure/linkList.h

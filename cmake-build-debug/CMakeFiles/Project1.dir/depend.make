@@ -7,6 +7,10 @@ CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../functions/expr
 CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../functions/expressionCalculation.h
 CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../structure/linkList.h
 
+CMakeFiles/Project1.dir/functions/matrixCalculation.c.obj: ../functions/matrixCalculation.c
+CMakeFiles/Project1.dir/functions/matrixCalculation.c.obj: ../functions/matrixCalculation.h
+CMakeFiles/Project1.dir/functions/matrixCalculation.c.obj: ../structure/orthogonalList.h
+
 CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../functions/polyCalculation.c
 CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../functions/polyCalculation.h
 CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../structure/linkList.h
@@ -14,6 +18,7 @@ CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../structure/polynomial
 
 CMakeFiles/Project1.dir/main.c.obj: .././functions/polyCalculation.h
 CMakeFiles/Project1.dir/main.c.obj: ../functions/expressionCalculation.h
+CMakeFiles/Project1.dir/main.c.obj: ../functions/matrixCalculation.h
 CMakeFiles/Project1.dir/main.c.obj: ../main.c
 CMakeFiles/Project1.dir/main.c.obj: ../structure/arrayList.h
 CMakeFiles/Project1.dir/main.c.obj: ../structure/linkList.h

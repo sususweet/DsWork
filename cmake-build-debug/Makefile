@@ -176,6 +176,33 @@ functions/expressionCalculation.c.s:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/expressionCalculation.c.s
 .PHONY : functions/expressionCalculation.c.s
 
+functions/matrixCalculation.obj: functions/matrixCalculation.c.obj
+
+.PHONY : functions/matrixCalculation.obj
+
+# target to build an object file
+functions/matrixCalculation.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/matrixCalculation.c.obj
+.PHONY : functions/matrixCalculation.c.obj
+
+functions/matrixCalculation.i: functions/matrixCalculation.c.i
+
+.PHONY : functions/matrixCalculation.i
+
+# target to preprocess a source file
+functions/matrixCalculation.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/matrixCalculation.c.i
+.PHONY : functions/matrixCalculation.c.i
+
+functions/matrixCalculation.s: functions/matrixCalculation.c.s
+
+.PHONY : functions/matrixCalculation.s
+
+# target to generate assembly for a file
+functions/matrixCalculation.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/matrixCalculation.c.s
+.PHONY : functions/matrixCalculation.c.s
+
 functions/polyCalculation.obj: functions/polyCalculation.c.obj
 
 .PHONY : functions/polyCalculation.obj
@@ -353,6 +380,9 @@ help:
 	@echo ... functions/expressionCalculation.obj
 	@echo ... functions/expressionCalculation.i
 	@echo ... functions/expressionCalculation.s
+	@echo ... functions/matrixCalculation.obj
+	@echo ... functions/matrixCalculation.i
+	@echo ... functions/matrixCalculation.s
 	@echo ... functions/polyCalculation.obj
 	@echo ... functions/polyCalculation.i
 	@echo ... functions/polyCalculation.s

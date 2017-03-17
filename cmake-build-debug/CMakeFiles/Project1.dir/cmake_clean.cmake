@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project1.dir/common/errorHandler.c.obj"
   "CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj"
   "CMakeFiles/Project1.dir/structure/orthogonalList.c.obj"
+  "CMakeFiles/Project1.dir/functions/matrixCalculation.c.obj"
   "Project1.pdb"
   "Project1.exe"
   "Project1.exe.manifest"

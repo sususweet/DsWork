@@ -94,6 +94,12 @@
 		<Unit filename="I:/DatabaseStructure/Project1/functions/expressionCalculation.h">
 			<Option target="Project1"/>
 		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/functions/matrixCalculation.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/functions/matrixCalculation.h">
+			<Option target="Project1"/>
+		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/functions/polyCalculation.c">
 			<Option target="Project1"/>
 		</Unit>

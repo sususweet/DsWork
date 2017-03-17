@@ -26,6 +26,16 @@ I:/DatabaseStructure/Project1/functions/expressionCalculation.h
 ../structure/linkList.h
 I:/DatabaseStructure/Project1/structure/linkList.h
 
+I:/DatabaseStructure/Project1/functions/matrixCalculation.c
+stdio.h
+-
+matrixCalculation.h
+I:/DatabaseStructure/Project1/functions/matrixCalculation.h
+
+I:/DatabaseStructure/Project1/functions/matrixCalculation.h
+../structure/orthogonalList.h
+I:/DatabaseStructure/Project1/structure/orthogonalList.h
+
 I:/DatabaseStructure/Project1/functions/polyCalculation.c
 stdio.h
 -
@@ -53,6 +63,8 @@ I:/DatabaseStructure/Project1/structure/linkList.h
 I:/DatabaseStructure/Project1/./functions/polyCalculation.h
 functions/expressionCalculation.h
 I:/DatabaseStructure/Project1/functions/expressionCalculation.h
+functions/matrixCalculation.h
+I:/DatabaseStructure/Project1/functions/matrixCalculation.h
 structure/orthogonalList.h
 I:/DatabaseStructure/Project1/structure/orthogonalList.h
 
