@@ -7,6 +7,7 @@
 #include "functions/expressionCalculation.h"
 #include "functions/matrixCalculation.h"
 #include "structure/orthogonalList.h"
+#include "functions/hashTableOperation.h"
 
 int operationArrayList();
 int operationLinkList();
@@ -19,11 +20,11 @@ int main(){
     //operationStack();
 
     //expCalculation();
+    hashTableCalculation();
 
+    //matrixCalculation();
 
-    matrixCalculation();
-
-    system("pause");
+   // system("pause");
     return 0;
 }
 

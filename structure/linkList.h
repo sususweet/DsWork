@@ -11,11 +11,14 @@ extern "C" {
 
 typedef struct _LinkListEntry LinkListEntry;
 
+typedef int LinkListKey;
+
 typedef void* LinkListValue;
 
 typedef int (*LinkListEqualFunc)(LinkListValue value1, LinkListValue value2);
 
 typedef struct _LinkListEntry{
+    LinkListKey key;
     LinkListValue data;
     LinkListEntry* next;
 };
@@ -49,7 +52,6 @@ LinkListEntry* linkList_prependNode(LinkListEntry* linkList, LinkListValue* data
 LinkListEntry* linkList_appendNode(LinkListEntry* linkList, LinkListValue* data);
 
 int linkList_deleteNode(LinkListEntry* linkList,LinkListEntry* deleteIndex);
-
 
 LinkListEntry* linkList_push(LinkListEntry* linkList, LinkListValue* data);
 

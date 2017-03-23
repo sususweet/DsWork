@@ -7,6 +7,11 @@ CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../functions/expr
 CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../functions/expressionCalculation.h
 CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../structure/linkList.h
 
+CMakeFiles/Project1.dir/functions/hashTableOperation.c.obj: ../functions/hashTableOperation.c
+CMakeFiles/Project1.dir/functions/hashTableOperation.c.obj: ../functions/hashTableOperation.h
+CMakeFiles/Project1.dir/functions/hashTableOperation.c.obj: ../structure/hashTable.h
+CMakeFiles/Project1.dir/functions/hashTableOperation.c.obj: ../structure/linkList.h
+
 CMakeFiles/Project1.dir/functions/matrixCalculation.c.obj: ../functions/matrixCalculation.c
 CMakeFiles/Project1.dir/functions/matrixCalculation.c.obj: ../functions/matrixCalculation.h
 CMakeFiles/Project1.dir/functions/matrixCalculation.c.obj: ../structure/orthogonalList.h
@@ -18,14 +23,20 @@ CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../structure/polynomial
 
 CMakeFiles/Project1.dir/main.c.obj: .././functions/polyCalculation.h
 CMakeFiles/Project1.dir/main.c.obj: ../functions/expressionCalculation.h
+CMakeFiles/Project1.dir/main.c.obj: ../functions/hashTableOperation.h
 CMakeFiles/Project1.dir/main.c.obj: ../functions/matrixCalculation.h
 CMakeFiles/Project1.dir/main.c.obj: ../main.c
 CMakeFiles/Project1.dir/main.c.obj: ../structure/arrayList.h
+CMakeFiles/Project1.dir/main.c.obj: ../structure/hashTable.h
 CMakeFiles/Project1.dir/main.c.obj: ../structure/linkList.h
 CMakeFiles/Project1.dir/main.c.obj: ../structure/orthogonalList.h
 
 CMakeFiles/Project1.dir/structure/arrayList.c.obj: ../structure/arrayList.c
 CMakeFiles/Project1.dir/structure/arrayList.c.obj: ../structure/arrayList.h
+
+CMakeFiles/Project1.dir/structure/hashTable.c.obj: ../structure/hashTable.c
+CMakeFiles/Project1.dir/structure/hashTable.c.obj: ../structure/hashTable.h
+CMakeFiles/Project1.dir/structure/hashTable.c.obj: ../structure/linkList.h
 
 CMakeFiles/Project1.dir/structure/linkList.c.obj: ../structure/linkList.c
 CMakeFiles/Project1.dir/structure/linkList.c.obj: ../structure/linkList.h

@@ -21,6 +21,7 @@ LinkListEntry* linkList_initList(){
     linkList = (LinkListEntry*) malloc(sizeof(LinkListEntry));
     Asert(linkList);
 
+    linkList -> key = -1;
     linkList -> next = NULL;
     linkList -> data = NULL;
     return linkList;
@@ -31,11 +32,11 @@ LinkListEntry* linkList_initList(){
 *************************************
 */
 void linkList_destroy(LinkListEntry *linkList){
-    LinkListEntry *linkListTemp,*linkListCache = linkList;
-    while (linkListCache->next != NULL){
-        linkListTemp = linkListCache -> next;
-        free(linkListCache);
-        linkListCache = linkListTemp;
+    LinkListEntry *linkListTemp;
+    while (linkList != NULL && linkList->next != NULL){
+        linkListTemp = linkList -> next;
+        linkList -> next = linkListTemp ->next;
+        free(linkListTemp);
     }
 }
 /*************************************
@@ -50,7 +51,7 @@ void linkList_show(LinkListEntry* linkList){
         linkList = linkList->next;
         printf("Elements in the linkList are: ");
         while (linkList != NULL){
-            printf("%d \t", (int) linkList->data);
+            printf("key:%d value:%d \t", linkList->key, (int) linkList->data);
             linkList = linkList->next;
         }
         printf("\n");
@@ -188,8 +189,8 @@ LinkListEntry* linkList_addNode(LinkListEntry* insertIndex, LinkListValue* data)
     newLinkListEntry = (LinkListEntry*) malloc(sizeof(LinkListEntry));
     if (newLinkListEntry == NULL) return NULL;
     newLinkListEntry -> data = data;
-
-    newLinkListEntry -> next = insertIndex ->next;
+    newLinkListEntry -> key = 0;
+    newLinkListEntry -> next = insertIndex -> next;
     insertIndex ->next = newLinkListEntry;
 
     return newLinkListEntry;

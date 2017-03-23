@@ -26,6 +26,20 @@ I:/DatabaseStructure/Project1/functions/expressionCalculation.h
 ../structure/linkList.h
 I:/DatabaseStructure/Project1/structure/linkList.h
 
+I:/DatabaseStructure/Project1/functions/hashTableOperation.c
+stdbool.h
+-
+stdio.h
+-
+stdlib.h
+-
+hashTableOperation.h
+I:/DatabaseStructure/Project1/functions/hashTableOperation.h
+
+I:/DatabaseStructure/Project1/functions/hashTableOperation.h
+../structure/hashTable.h
+I:/DatabaseStructure/Project1/structure/hashTable.h
+
 I:/DatabaseStructure/Project1/functions/matrixCalculation.c
 stdio.h
 -
@@ -67,6 +81,8 @@ functions/matrixCalculation.h
 I:/DatabaseStructure/Project1/functions/matrixCalculation.h
 structure/orthogonalList.h
 I:/DatabaseStructure/Project1/structure/orthogonalList.h
+functions/hashTableOperation.h
+I:/DatabaseStructure/Project1/functions/hashTableOperation.h
 
 I:/DatabaseStructure/Project1/structure/arrayList.c
 stdlib.h
@@ -79,6 +95,20 @@ string.h
 I:/DatabaseStructure/Project1/structure/string.h
 
 I:/DatabaseStructure/Project1/structure/arrayList.h
+
+I:/DatabaseStructure/Project1/structure/hashTable.c
+stdlib.h
+-
+stdio.h
+-
+hashTable.h
+I:/DatabaseStructure/Project1/structure/hashTable.h
+
+I:/DatabaseStructure/Project1/structure/hashTable.h
+stdbool.h
+-
+linkList.h
+I:/DatabaseStructure/Project1/structure/linkList.h
 
 I:/DatabaseStructure/Project1/structure/linkList.c
 stdlib.h

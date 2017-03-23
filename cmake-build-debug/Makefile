@@ -176,6 +176,33 @@ functions/expressionCalculation.c.s:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/expressionCalculation.c.s
 .PHONY : functions/expressionCalculation.c.s
 
+functions/hashTableOperation.obj: functions/hashTableOperation.c.obj
+
+.PHONY : functions/hashTableOperation.obj
+
+# target to build an object file
+functions/hashTableOperation.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/hashTableOperation.c.obj
+.PHONY : functions/hashTableOperation.c.obj
+
+functions/hashTableOperation.i: functions/hashTableOperation.c.i
+
+.PHONY : functions/hashTableOperation.i
+
+# target to preprocess a source file
+functions/hashTableOperation.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/hashTableOperation.c.i
+.PHONY : functions/hashTableOperation.c.i
+
+functions/hashTableOperation.s: functions/hashTableOperation.c.s
+
+.PHONY : functions/hashTableOperation.s
+
+# target to generate assembly for a file
+functions/hashTableOperation.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/hashTableOperation.c.s
+.PHONY : functions/hashTableOperation.c.s
+
 functions/matrixCalculation.obj: functions/matrixCalculation.c.obj
 
 .PHONY : functions/matrixCalculation.obj
@@ -284,6 +311,33 @@ structure/arrayList.c.s:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/arrayList.c.s
 .PHONY : structure/arrayList.c.s
 
+structure/hashTable.obj: structure/hashTable.c.obj
+
+.PHONY : structure/hashTable.obj
+
+# target to build an object file
+structure/hashTable.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/hashTable.c.obj
+.PHONY : structure/hashTable.c.obj
+
+structure/hashTable.i: structure/hashTable.c.i
+
+.PHONY : structure/hashTable.i
+
+# target to preprocess a source file
+structure/hashTable.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/hashTable.c.i
+.PHONY : structure/hashTable.c.i
+
+structure/hashTable.s: structure/hashTable.c.s
+
+.PHONY : structure/hashTable.s
+
+# target to generate assembly for a file
+structure/hashTable.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/hashTable.c.s
+.PHONY : structure/hashTable.c.s
+
 structure/linkList.obj: structure/linkList.c.obj
 
 .PHONY : structure/linkList.obj
@@ -380,6 +434,9 @@ help:
 	@echo ... functions/expressionCalculation.obj
 	@echo ... functions/expressionCalculation.i
 	@echo ... functions/expressionCalculation.s
+	@echo ... functions/hashTableOperation.obj
+	@echo ... functions/hashTableOperation.i
+	@echo ... functions/hashTableOperation.s
 	@echo ... functions/matrixCalculation.obj
 	@echo ... functions/matrixCalculation.i
 	@echo ... functions/matrixCalculation.s
@@ -392,6 +449,9 @@ help:
 	@echo ... structure/arrayList.obj
 	@echo ... structure/arrayList.i
 	@echo ... structure/arrayList.s
+	@echo ... structure/hashTable.obj
+	@echo ... structure/hashTable.i
+	@echo ... structure/hashTable.s
 	@echo ... structure/linkList.obj
 	@echo ... structure/linkList.i
 	@echo ... structure/linkList.s
