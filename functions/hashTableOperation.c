@@ -4,7 +4,9 @@
 
 #include <stdbool.h>
 #include <stdio.h>
-#include <stdlib.h>
+#include <time.h>
+#include <profileapi.h>
+#include <synchapi.h>
 #include "hashTableOperation.h"
 
 /*检查是否成功申请内存*/
@@ -38,11 +40,22 @@ int hashTableCalculation(){
     HashTable* hashTable;
     hashTable = hash_table_new(MAX_SIZE, hashTableHash, hashTableEqual);
     Asert(hashTable);
-    hash_table_insert(hashTable, 1, 13);
-    hash_table_insert(hashTable, 12, 283);
-    hash_table_insert(hashTable, 111, 723);
-    hash_table_insert(hashTable, 311, 523);
-    hash_table_insert(hashTable, 141, 213);
+    hashTable = hash_table_insert(hashTable, 1, 13);
+    hashTable = hash_table_insert(hashTable, 12, 283);
+    hashTable = hash_table_insert(hashTable, 111, 723);
+    hashTable = hash_table_insert(hashTable, 311, 523);
+    hashTable = hash_table_insert(hashTable, 141, 213);
+    hash_table_remove(hashTable, 143);
+    for (int i =0 ;i<10100;i++){
+        hashTable = hash_table_insert(hashTable, i, rand());
+    }
+
+    LARGE_INTEGER nFreq;
+    LARGE_INTEGER nBeginTime;
+    LARGE_INTEGER nEndTime;
+    double time;
+    QueryPerformanceFrequency(&nFreq);
+    QueryPerformanceCounter(&nBeginTime);
 
     HashTableValue value = hash_table_lookup(hashTable, 143);
     if (value == NULL){
@@ -50,7 +63,14 @@ int hashTableCalculation(){
     }else{
         printf("value:%d\n",(int) value);
     }
+
+    QueryPerformanceCounter(&nEndTime);
+
+    time=(double)(nEndTime.QuadPart-nBeginTime.QuadPart)/(double)nFreq.QuadPart;
+    printf("%f\n",time);
+
     hash_table_show(hashTable);
-    printf("data:%d\n",hashTable->table_size);
+    printf("tableSize:%d\n",hashTable->table_size);
     hash_table_clear(hashTable);
+    return 0;
 }

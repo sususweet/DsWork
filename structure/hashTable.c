@@ -67,8 +67,8 @@ HashTable* hash_table_enlarge(HashTable* hashTable){
     HashTableEntry *rover;
     for (int index = 0; index < hashTable -> table_size; index++){
         rover = hashTable -> tableList[index] -> next;
-        while (rover != NULL && rover->key != NULL && rover->key >=0 ) {
-            if (hash_table_insert(newTable, rover->key, rover->data) != 0){
+        while (rover != NULL && rover-> key != NULL && rover-> key >=0 ) {
+            if (!hash_table_insert(newTable, rover->key, rover->data)){
                 printf("Enlarge error!");
                 return NULL;
             }
@@ -79,18 +79,16 @@ HashTable* hash_table_enlarge(HashTable* hashTable){
     return newTable;
 }
 
-int hash_table_insert(HashTable* hashTable, HashTableKey key,
-                      HashTableValue value){
+HashTable* hash_table_insert(HashTable* hashTable, HashTableKey key, HashTableValue value){
     HashTableEntry *rover;
     unsigned int index;
 
     /* 如果表中的结点过多，冲突的可能性增大，散列表的查找效率下降，此时扩大表的大小 */
     /* 当已使用的结点数量超过散列表大小的1/3 */
     if ((hashTable->entries * 3) / hashTable->table_size > 0){
-        hashTable = hash_table_enlarge(hashTable);
+        if (!hash_table_enlarge(hashTable)) return hashTable;
+        else hashTable = hash_table_enlarge(hashTable);
     }
-    if (!hashTable) return -1;
-
 
     /* 根据关键词找到对应链表头结点的下标 */
     index = hashTable->hash_func(hashTable->table_size, key);
@@ -99,7 +97,6 @@ int hash_table_insert(HashTable* hashTable, HashTableKey key,
     rover = hashTable->tableList[index]->next;
     while (rover != NULL) {
         if (hashTable->equal_func(rover->key, key)) {
-
             /* 若找到相同关键词，用新数据覆写结点 */
             /* 如果有释放数值和关键词内存的函数，那么释放旧内存，没有则跳过 */
             if (hashTable->value_free_func != NULL)
@@ -110,7 +107,7 @@ int hash_table_insert(HashTable* hashTable, HashTableKey key,
             rover->data = value;
 
             /* 覆写完成 */
-            return 0;
+            return hashTable;
         }
         rover = rover->next;
     }
@@ -122,7 +119,7 @@ int hash_table_insert(HashTable* hashTable, HashTableKey key,
     hashTable->entries++;
 
     /* 添加完成 */
-    return 0;
+    return hashTable;
 }
 
 int hash_table_remove(HashTable *hashTable, HashTableKey key){

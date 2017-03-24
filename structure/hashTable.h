@@ -12,7 +12,7 @@
 extern "C" {
 #endif
 
-#define MAX_SIZE 1
+#define MAX_SIZE 11111
 
 typedef struct _HashTable HashTable;
 typedef int HashTableKey;
@@ -40,7 +40,7 @@ HashTable* hash_table_new(unsigned int size,HashTableHashFunc hash_func, HashTab
 
 HashTable* hash_table_list_new(HashTable* hashTable);
 
-int hash_table_insert(HashTable *hashTable, LinkListKey key, HashTableValue value);
+HashTable* hash_table_insert(HashTable *hashTable, LinkListKey key, HashTableValue value);
 
 int hash_table_remove(HashTable *hashTable, HashTableKey key);
 

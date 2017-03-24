@@ -31,7 +31,11 @@ stdbool.h
 -
 stdio.h
 -
-stdlib.h
+time.h
+-
+profileapi.h
+-
+synchapi.h
 -
 hashTableOperation.h
 I:/DatabaseStructure/Project1/functions/hashTableOperation.h

@@ -24,7 +24,7 @@ int main(){
 
     //matrixCalculation();
 
-   // system("pause");
+    //system("pause");
     return 0;
 }
 
