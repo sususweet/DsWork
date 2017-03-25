@@ -419,6 +419,114 @@ structure/polynomial.c.s:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/polynomial.c.s
 .PHONY : structure/polynomial.c.s
 
+test/alloc-testing.obj: test/alloc-testing.c.obj
+
+.PHONY : test/alloc-testing.obj
+
+# target to build an object file
+test/alloc-testing.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/alloc-testing.c.obj
+.PHONY : test/alloc-testing.c.obj
+
+test/alloc-testing.i: test/alloc-testing.c.i
+
+.PHONY : test/alloc-testing.i
+
+# target to preprocess a source file
+test/alloc-testing.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/alloc-testing.c.i
+.PHONY : test/alloc-testing.c.i
+
+test/alloc-testing.s: test/alloc-testing.c.s
+
+.PHONY : test/alloc-testing.s
+
+# target to generate assembly for a file
+test/alloc-testing.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/alloc-testing.c.s
+.PHONY : test/alloc-testing.c.s
+
+test/framework.obj: test/framework.c.obj
+
+.PHONY : test/framework.obj
+
+# target to build an object file
+test/framework.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/framework.c.obj
+.PHONY : test/framework.c.obj
+
+test/framework.i: test/framework.c.i
+
+.PHONY : test/framework.i
+
+# target to preprocess a source file
+test/framework.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/framework.c.i
+.PHONY : test/framework.c.i
+
+test/framework.s: test/framework.c.s
+
+.PHONY : test/framework.s
+
+# target to generate assembly for a file
+test/framework.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/framework.c.s
+.PHONY : test/framework.c.s
+
+test/test-arrayList.obj: test/test-arrayList.c.obj
+
+.PHONY : test/test-arrayList.obj
+
+# target to build an object file
+test/test-arrayList.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-arrayList.c.obj
+.PHONY : test/test-arrayList.c.obj
+
+test/test-arrayList.i: test/test-arrayList.c.i
+
+.PHONY : test/test-arrayList.i
+
+# target to preprocess a source file
+test/test-arrayList.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-arrayList.c.i
+.PHONY : test/test-arrayList.c.i
+
+test/test-arrayList.s: test/test-arrayList.c.s
+
+.PHONY : test/test-arrayList.s
+
+# target to generate assembly for a file
+test/test-arrayList.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-arrayList.c.s
+.PHONY : test/test-arrayList.c.s
+
+test/test-linkList.obj: test/test-linkList.c.obj
+
+.PHONY : test/test-linkList.obj
+
+# target to build an object file
+test/test-linkList.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-linkList.c.obj
+.PHONY : test/test-linkList.c.obj
+
+test/test-linkList.i: test/test-linkList.c.i
+
+.PHONY : test/test-linkList.i
+
+# target to preprocess a source file
+test/test-linkList.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-linkList.c.i
+.PHONY : test/test-linkList.c.i
+
+test/test-linkList.s: test/test-linkList.c.s
+
+.PHONY : test/test-linkList.s
+
+# target to generate assembly for a file
+test/test-linkList.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-linkList.c.s
+.PHONY : test/test-linkList.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -461,6 +569,18 @@ help:
 	@echo ... structure/polynomial.obj
 	@echo ... structure/polynomial.i
 	@echo ... structure/polynomial.s
+	@echo ... test/alloc-testing.obj
+	@echo ... test/alloc-testing.i
+	@echo ... test/alloc-testing.s
+	@echo ... test/framework.obj
+	@echo ... test/framework.i
+	@echo ... test/framework.s
+	@echo ... test/test-arrayList.obj
+	@echo ... test/test-arrayList.i
+	@echo ... test/test-arrayList.s
+	@echo ... test/test-linkList.obj
+	@echo ... test/test-linkList.i
+	@echo ... test/test-linkList.s
 .PHONY : help
 
 

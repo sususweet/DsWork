@@ -3,17 +3,18 @@
 //
 #include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
 #include "linkList.h"
+#include "../test/alloc-testing.h"
 
-
-/*æ£€æŸ¥æ˜¯å¦æˆåŠŸç”³è¯·å†…å­˜*/
+/*¼ì²éÊÇ·ñ³É¹¦ÉêÇëÄÚ´æ*/
 #define Asert(par) if(par==NULL) {\
-                printf("%s,%d è¯·æ±‚å†…å­˜å¤±è´¥ï¼\n",__FILE__,__LINE__);\
+                printf("%s,%d ÇëÇóÄÚ´æÊ§°Ü£¡\n",__FILE__,__LINE__);\
                 return NULL;}
 
 /*************************************
-*@desc: å»ºç«‹ä¸€ä¸ªåŒ…å«æœ‰å¤´ç»“ç‚¹çš„é“¾è¡¨ï¼Œå¤´ç»“ç‚¹æ•°æ®ä¸ºç©º
-*@return: åŒ…å«æœ‰å¤´ç»“ç‚¹çš„é“¾è¡¨èµ·å§‹åœ°å€
+*@desc: ½¨Á¢Ò»¸ö°üº¬ÓÐÍ·½áµãµÄÁ´±í£¬Í·½áµãÊý¾ÝÎª¿Õ
+*@return: °üº¬ÓÐÍ·½áµãµÄÁ´±íÆðÊ¼µØÖ·
 *************************************
 */
 LinkListEntry* linkList_initList(){
@@ -27,8 +28,8 @@ LinkListEntry* linkList_initList(){
     return linkList;
 }
 /*************************************
-*@desc: é”€æ¯æ•´ä¸ªé“¾è¡¨
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
+*@desc: Ïú»ÙÕû¸öÁ´±í
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
 *************************************
 */
 void linkList_destroy(LinkListEntry *linkList){
@@ -38,10 +39,13 @@ void linkList_destroy(LinkListEntry *linkList){
         linkList -> next = linkListTemp ->next;
         free(linkListTemp);
     }
+    if(linkList != NULL) free(linkList);
+    assert(alloc_test_get_allocated() == 0);
 }
+
 /*************************************
-*@desc: æ‰“å°é“¾è¡¨çš„æ•°æ®
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
+*@desc: ´òÓ¡Á´±íµÄÊý¾Ý
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
 *************************************
 */
 void linkList_show(LinkListEntry* linkList){
@@ -51,17 +55,17 @@ void linkList_show(LinkListEntry* linkList){
         linkList = linkList->next;
         printf("Elements in the linkList are: ");
         while (linkList != NULL){
-            printf("key:%d value:%d \t", linkList->key, (int) linkList->data);
+            printf("%d \t", (int) linkList->data);
             linkList = linkList->next;
         }
         printf("\n");
     }
 }
 /*************************************
-*@desc: äº¤æ¢é“¾è¡¨ä¸¤ä¸ªèŠ‚ç‚¹
-*@param: node1->èŠ‚ç‚¹1åœ°å€
-*@param: node2->èŠ‚ç‚¹2åœ°å€
-*@return: æ“ä½œæ˜¯å¦æˆåŠŸ
+*@desc: ½»»»Á´±íÁ½¸ö½Úµã
+*@param: node1->½Úµã1µØÖ·
+*@param: node2->½Úµã2µØÖ·
+*@return: ²Ù×÷ÊÇ·ñ³É¹¦
 *************************************
 */
 int linkList_swapNode(LinkListEntry* node1, LinkListEntry* node2){
@@ -73,10 +77,10 @@ int linkList_swapNode(LinkListEntry* node1, LinkListEntry* node2){
     return 0;
 }
 /*************************************
-*@desc: æ‰¾åˆ°é“¾è¡¨æŸä¸ªèŠ‚ç‚¹çš„å‰ä¸€ä¸ªèŠ‚ç‚¹
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
-*@param: index->å¾…å¤„ç†çš„èŠ‚ç‚¹åœ°å€
-*@return: å‰ä¸€ä¸ªèŠ‚ç‚¹åœ°å€
+*@desc: ÕÒµ½Á´±íÄ³¸ö½ÚµãµÄÇ°Ò»¸ö½Úµã
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
+*@param: index->´ý´¦ÀíµÄ½ÚµãµØÖ·
+*@return: Ç°Ò»¸ö½ÚµãµØÖ·
 *************************************
 */
 LinkListEntry* linkList_getBefore(LinkListEntry* linkList, LinkListEntry* index){
@@ -89,28 +93,28 @@ LinkListEntry* linkList_getBefore(LinkListEntry* linkList, LinkListEntry* index)
     return linkListBefore;
 }
 /*************************************
-*@desc: æ‰¾åˆ°é“¾è¡¨æŸä¸ªèŠ‚ç‚¹çš„åŽä¸€ä¸ªèŠ‚ç‚¹
-*@param: index->å¾…å¤„ç†çš„èŠ‚ç‚¹åœ°å€
-*@return: åŽä¸€ä¸ªèŠ‚ç‚¹åœ°å€
+*@desc: ÕÒµ½Á´±íÄ³¸ö½ÚµãµÄºóÒ»¸ö½Úµã
+*@param: index->´ý´¦ÀíµÄ½ÚµãµØÖ·
+*@return: ºóÒ»¸ö½ÚµãµØÖ·
 *************************************
 */
 LinkListEntry* linkList_getAfter(LinkListEntry* index){
     return index->next;
 }
 /*************************************
-*@desc: æ‰¾åˆ°é“¾è¡¨çš„ç¬¬ä¸€ä¸ªèŠ‚ç‚¹
-*@note: å› ä¸ºæœ¬æ•°æ®ç»“æž„å»ºç«‹çš„é“¾è¡¨æœ‰å¤´ç»“ç‚¹ï¼Œå› æ­¤éœ€è¦æŸ¥æ‰¾å…¥å£èŠ‚ç‚¹çš„ä¸‹ä¸€ä¸ªèŠ‚ç‚¹
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
-*@return: é“¾è¡¨çš„ç¬¬ä¸€ä¸ªèŠ‚ç‚¹åœ°å€
+*@desc: ÕÒµ½Á´±íµÄµÚÒ»¸ö½Úµã
+*@note: ÒòÎª±¾Êý¾Ý½á¹¹½¨Á¢µÄÁ´±íÓÐÍ·½áµã£¬Òò´ËÐèÒª²éÕÒÈë¿Ú½ÚµãµÄÏÂÒ»¸ö½Úµã
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
+*@return: Á´±íµÄµÚÒ»¸ö½ÚµãµØÖ·
 *************************************
 */
 LinkListEntry* linkList_getFirstNode(LinkListEntry* linkList){
     return linkList->next;
 }
 /*************************************
-*@desc:  æ‰¾åˆ°é“¾è¡¨çš„æœ€åŽä¸€ä¸ªèŠ‚ç‚¹
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
-*@return: é“¾è¡¨çš„æœ€åŽä¸€ä¸ªèŠ‚ç‚¹åœ°å€
+*@desc:  ÕÒµ½Á´±íµÄ×îºóÒ»¸ö½Úµã
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
+*@return: Á´±íµÄ×îºóÒ»¸ö½ÚµãµØÖ·
 *************************************
 */
 LinkListEntry* linkList_getLastNode(LinkListEntry* linkList){
@@ -121,10 +125,10 @@ LinkListEntry* linkList_getLastNode(LinkListEntry* linkList){
     return linkListCache;
 }
 /*************************************
-*@desc: è®¡ç®—é“¾è¡¨é•¿åº¦
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
-*@return: é“¾è¡¨é•¿åº¦
-*@note: é“¾è¡¨ä¸­åŒ…å«å¤´ç»“ç‚¹ï¼Œæ­¤å¤„å¤„ç†éœ€è¦ç‰¹åˆ«æ³¨æ„ï¼ŒåŒæ—¶è¿”å›žçš„é•¿åº¦ä¸å«å¤´ç»“ç‚¹
+*@desc: ¼ÆËãÁ´±í³¤¶È
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
+*@return: Á´±í³¤¶È
+*@note: Á´±íÖÐ°üº¬Í·½áµã£¬´Ë´¦´¦ÀíÐèÒªÌØ±ð×¢Òâ£¬Í¬Ê±·µ»ØµÄ³¤¶È²»º¬Í·½áµã
 *************************************
 */
 unsigned int linkList_getLength(LinkListEntry* linkList){
@@ -137,15 +141,15 @@ unsigned int linkList_getLength(LinkListEntry* linkList){
     return count;
 }
 /*************************************
-*@desc: æ‰¾åˆ°æŸä¸ªç´¢å¼•çš„é“¾è¡¨èŠ‚ç‚¹åœ°å€
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
-*@param: index->ç´¢å¼•æ•°ï¼Œä¸ºè‡ªç„¶æ•°
-*@return: é“¾è¡¨èŠ‚ç‚¹åœ°å€
+*@desc: ÕÒµ½Ä³¸öË÷ÒýµÄÁ´±í½ÚµãµØÖ·
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
+*@param: index->Ë÷ÒýÊý£¬Îª×ÔÈ»Êý
+*@return: Á´±í½ÚµãµØÖ·
 *************************************
 */
 LinkListEntry* linkList_getIndexEntryByIndex(LinkListEntry* linkList, unsigned int index){
     LinkListEntry* linkListCache;
-    printf("linkList getIndex: %d\n",index);
+    //printf("linkList getIndex: %d\n",index);
     unsigned int count = 0;
     for (linkListCache = linkList->next; linkListCache != NULL; linkListCache = linkListCache->next){
         if (index == count) break;
@@ -154,12 +158,12 @@ LinkListEntry* linkList_getIndexEntryByIndex(LinkListEntry* linkList, unsigned i
     return linkListCache;
 }
 /*************************************
-*@desc: æ‰¾åˆ°æŸä¸ªç‰¹å®šæ•°æ®çš„é“¾è¡¨èŠ‚ç‚¹åœ°å€
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
-*@param: linkListValue->å¾…æŸ¥æ‰¾çš„æ•°æ®
-*@param: callback->æ•°æ®æ¯”è¾ƒå‡½æ•°
-*@return: é“¾è¡¨èŠ‚ç‚¹åœ°å€
-*@note: æ­¤å¤„åªèƒ½æŸ¥æ‰¾åˆ°åŒ¹é…çš„ç¬¬ä¸€ä¸ªæ•°æ®
+*@desc: ÕÒµ½Ä³¸öÌØ¶¨Êý¾ÝµÄÁ´±í½ÚµãµØÖ·
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
+*@param: linkListValue->´ý²éÕÒµÄÊý¾Ý
+*@param: callback->Êý¾Ý±È½Ïº¯Êý
+*@return: Á´±í½ÚµãµØÖ·
+*@note: ´Ë´¦Ö»ÄÜ²éÕÒµ½Æ¥ÅäµÄµÚÒ»¸öÊý¾Ý
 *************************************
 */
 LinkListEntry* linkList_getIndexEntryByData(LinkListEntry* linkList, LinkListValue* linkListValue, LinkListEqualFunc callback){
@@ -176,10 +180,10 @@ LinkListEntry* linkList_getIndexEntryByData(LinkListEntry* linkList, LinkListVal
     return NULL;
 }
 /*************************************
-*@desc: ç»™é“¾è¡¨ç‰¹å®šèŠ‚ç‚¹åŽå¢žåŠ èŠ‚ç‚¹
-*@param: insertIndex->å¾…å¤„ç†çš„ç‰¹å®šèŠ‚ç‚¹
-*@param: data->å¾…å¢žåŠ çš„èŠ‚ç‚¹æ•°æ®æŒ‡é’ˆ
-*@return: å¢žåŠ çš„èŠ‚ç‚¹åœ°å€
+*@desc: ¸øÁ´±íÌØ¶¨½ÚµãºóÔö¼Ó½Úµã
+*@param: insertIndex->´ý´¦ÀíµÄÌØ¶¨½Úµã
+*@param: data->´ýÔö¼ÓµÄ½ÚµãÊý¾ÝÖ¸Õë
+*@return: Ôö¼ÓµÄ½ÚµãµØÖ·
 *************************************
 */
 LinkListEntry* linkList_addNode(LinkListEntry* insertIndex, LinkListValue* data){
@@ -196,30 +200,30 @@ LinkListEntry* linkList_addNode(LinkListEntry* insertIndex, LinkListValue* data)
     return newLinkListEntry;
 }
 /*************************************
-*@desc: åœ¨é“¾è¡¨å¼€å¤´å¢žåŠ èŠ‚ç‚¹
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
-*@param: data->å¾…å¤„ç†çš„èŠ‚ç‚¹åœ°å€
-*@return: å¢žåŠ çš„èŠ‚ç‚¹åœ°å€
+*@desc: ÔÚÁ´±í¿ªÍ·Ôö¼Ó½Úµã
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
+*@param: data->´ý´¦ÀíµÄ½ÚµãµØÖ·
+*@return: Ôö¼ÓµÄ½ÚµãµØÖ·
 *************************************
 */
 LinkListEntry* linkList_prependNode(LinkListEntry* linkList, LinkListValue* data){
     linkList_addNode(linkList, data);
 }
 /*************************************
-*@desc: åœ¨é“¾è¡¨æœ«å°¾å¢žåŠ èŠ‚ç‚¹
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
-*@param: data->å¾…å¤„ç†çš„èŠ‚ç‚¹åœ°å€
-*@return: å¢žåŠ çš„èŠ‚ç‚¹åœ°å€
+*@desc: ÔÚÁ´±íÄ©Î²Ôö¼Ó½Úµã
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
+*@param: data->´ý´¦ÀíµÄ½ÚµãµØÖ·
+*@return: Ôö¼ÓµÄ½ÚµãµØÖ·
 *************************************
 */
 LinkListEntry* linkList_appendNode(LinkListEntry* linkList, LinkListValue* data){
     linkList_addNode(linkList_getLastNode(linkList), data);
 }
 /*************************************
-*@desc: åˆ é™¤é“¾è¡¨çš„æŸä¸ªèŠ‚ç‚¹
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
-*@param: deleteIndex->å¾…åˆ é™¤çš„èŠ‚ç‚¹åœ°å€
-*@return: åˆ é™¤çŠ¶æ€
+*@desc: É¾³ýÁ´±íµÄÄ³¸ö½Úµã
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
+*@param: deleteIndex->´ýÉ¾³ýµÄ½ÚµãµØÖ·
+*@return: É¾³ý×´Ì¬
 *************************************
 */
 int linkList_deleteNode(LinkListEntry* linkList, LinkListEntry* deleteIndex){
@@ -235,23 +239,23 @@ int linkList_deleteNode(LinkListEntry* linkList, LinkListEntry* deleteIndex){
     return 0;
 }
 /*************************************
-*@desc: æ ˆæ“ä½œâ€”â€”å…¥æ ˆ
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
-*@param: data->å¾…å¤„ç†çš„èŠ‚ç‚¹åœ°å€
-*@return: å¢žåŠ çš„èŠ‚ç‚¹åœ°å€
+*@desc: Õ»²Ù×÷¡ª¡ªÈëÕ»
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
+*@param: data->´ý´¦ÀíµÄ½ÚµãµØÖ·
+*@return: Ôö¼ÓµÄ½ÚµãµØÖ·
 *************************************
 */
 LinkListEntry* linkList_push(LinkListEntry* linkList, LinkListValue* data){
-    //æ­¤å¤„å»ºç«‹çš„é“¾è¡¨åŒ…å«å¤´ç»“ç‚¹
+    //´Ë´¦½¨Á¢µÄÁ´±í°üº¬Í·½áµã
     if (linkList_prependNode(linkList, data) == NULL){
         printf("stack PUSH operation failed!\n");
         return NULL;
     };
 }
 /*************************************
-*@desc: æ ˆæ“ä½œâ€”â€”å‡ºæ ˆ
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
-*@return: æ ˆé¡¶æ•°æ®æŒ‡é’ˆ
+*@desc: Õ»²Ù×÷¡ª¡ª³öÕ»
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
+*@return: Õ»¶¥Êý¾ÝÖ¸Õë
 *************************************
 */
 LinkListValue linkList_pop(LinkListEntry* linkList){
@@ -268,9 +272,9 @@ LinkListValue linkList_pop(LinkListEntry* linkList){
     return NULL;
 }
 /*************************************
-*@desc: æ ˆæ“ä½œâ€”â€”çœ‹æ ˆé¡¶å…ƒç´ 
-*@param: linkList->é“¾è¡¨å…¥å£åœ°å€
-*@return: æ ˆé¡¶æ•°æ®æŒ‡é’ˆ
+*@desc: Õ»²Ù×÷¡ª¡ª¿´Õ»¶¥ÔªËØ
+*@param: linkList->Á´±íÈë¿ÚµØÖ·
+*@return: Õ»¶¥Êý¾ÝÖ¸Õë
 *************************************
 */
 LinkListValue linkList_peek(LinkListEntry* linkList){
@@ -281,5 +285,27 @@ LinkListValue linkList_peek(LinkListEntry* linkList){
     }else {
         printf("stack PEEK operation failed. Please check the stack!\n");
         return NULL;
+    }
+}
+
+LinkListEntry* linkList_sort(LinkListEntry* linkList, int type, LinkListEqualFunc compare){
+    LinkListEntry *polyCache1, *polyCache2;
+    if(linkList_getLength(linkList) == 0) {
+        return NULL;
+    } else {
+        for (polyCache1 = linkList->next; polyCache1 != NULL; polyCache1 = polyCache1 -> next){
+            for (polyCache2 = polyCache1 -> next; polyCache2 != NULL; polyCache2 = polyCache2 -> next){
+                if (type == 0){
+                    if  (compare(polyCache1->data,polyCache2->data)>0){
+                        linkList_swapNode(polyCache1, polyCache2);
+                    }
+                }else{
+                    if  (compare(polyCache1->data,polyCache2->data)<0){
+                        linkList_swapNode(polyCache1, polyCache2);
+                    }
+                }
+            }
+        }
+        return linkList;
     }
 }

@@ -30,9 +30,12 @@ CMakeFiles/Project1.dir/main.c.obj: ../structure/arrayList.h
 CMakeFiles/Project1.dir/main.c.obj: ../structure/hashTable.h
 CMakeFiles/Project1.dir/main.c.obj: ../structure/linkList.h
 CMakeFiles/Project1.dir/main.c.obj: ../structure/orthogonalList.h
+CMakeFiles/Project1.dir/main.c.obj: ../test/test-arrayList.h
+CMakeFiles/Project1.dir/main.c.obj: ../test/test-linkList.h
 
 CMakeFiles/Project1.dir/structure/arrayList.c.obj: ../structure/arrayList.c
 CMakeFiles/Project1.dir/structure/arrayList.c.obj: ../structure/arrayList.h
+CMakeFiles/Project1.dir/structure/arrayList.c.obj: ../test/alloc-testing.h
 
 CMakeFiles/Project1.dir/structure/hashTable.c.obj: ../structure/hashTable.c
 CMakeFiles/Project1.dir/structure/hashTable.c.obj: ../structure/hashTable.h
@@ -40,6 +43,7 @@ CMakeFiles/Project1.dir/structure/hashTable.c.obj: ../structure/linkList.h
 
 CMakeFiles/Project1.dir/structure/linkList.c.obj: ../structure/linkList.c
 CMakeFiles/Project1.dir/structure/linkList.c.obj: ../structure/linkList.h
+CMakeFiles/Project1.dir/structure/linkList.c.obj: ../test/alloc-testing.h
 
 CMakeFiles/Project1.dir/structure/orthogonalList.c.obj: ../structure/orthogonalList.c
 CMakeFiles/Project1.dir/structure/orthogonalList.c.obj: ../structure/orthogonalList.h
@@ -47,4 +51,23 @@ CMakeFiles/Project1.dir/structure/orthogonalList.c.obj: ../structure/orthogonalL
 CMakeFiles/Project1.dir/structure/polynomial.c.obj: ../structure/linkList.h
 CMakeFiles/Project1.dir/structure/polynomial.c.obj: ../structure/polynomial.c
 CMakeFiles/Project1.dir/structure/polynomial.c.obj: ../structure/polynomial.h
+
+CMakeFiles/Project1.dir/test/alloc-testing.c.obj: ../test/alloc-testing.c
+CMakeFiles/Project1.dir/test/alloc-testing.c.obj: ../test/alloc-testing.h
+
+CMakeFiles/Project1.dir/test/framework.c.obj: ../test/alloc-testing.h
+CMakeFiles/Project1.dir/test/framework.c.obj: ../test/framework.c
+CMakeFiles/Project1.dir/test/framework.c.obj: ../test/framework.h
+
+CMakeFiles/Project1.dir/test/test-arrayList.c.obj: ../structure/arrayList.h
+CMakeFiles/Project1.dir/test/test-arrayList.c.obj: ../test/alloc-testing.h
+CMakeFiles/Project1.dir/test/test-arrayList.c.obj: ../test/framework.h
+CMakeFiles/Project1.dir/test/test-arrayList.c.obj: ../test/test-arrayList.c
+CMakeFiles/Project1.dir/test/test-arrayList.c.obj: ../test/test-arrayList.h
+
+CMakeFiles/Project1.dir/test/test-linkList.c.obj: ../structure/linkList.h
+CMakeFiles/Project1.dir/test/test-linkList.c.obj: ../test/alloc-testing.h
+CMakeFiles/Project1.dir/test/test-linkList.c.obj: ../test/framework.h
+CMakeFiles/Project1.dir/test/test-linkList.c.obj: ../test/test-linkList.c
+CMakeFiles/Project1.dir/test/test-linkList.c.obj: ../test/test-linkList.h
 

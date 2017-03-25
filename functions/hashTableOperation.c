@@ -4,9 +4,7 @@
 
 #include <stdbool.h>
 #include <stdio.h>
-#include <time.h>
 #include <profileapi.h>
-#include <synchapi.h>
 #include "hashTableOperation.h"
 
 /*检查是否成功申请内存*/

@@ -3,20 +3,26 @@
 //
 #include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
 #include "arrayList.h"
 #include "string.h"
+#include "../test/alloc-testing.h"
 
-/*æ£€æŸ¥æ˜¯å¦æˆåŠŸç”³è¯·å†…å­˜*/
+/*¼ì²éÊÇ·ñ³É¹¦ÉêÇëÄÚ´æ*/
 #define Asert(par) if(par==NULL) {\
-                printf("%s,%d è¯·æ±‚å†…å­˜å¤±è´¥ï¼\n",__FILE__,__LINE__);\
+                printf("%s,%d ÇëÇóÄÚ´æÊ§°Ü£¡\n",__FILE__,__LINE__);\
                 return NULL;}
 
 ArrayList * arrayList_init(){
-    //ç”³è¯·ç»“æ„ä½“çš„å†…å­˜
+    //ÉêÇë½á¹¹ÌåµÄÄÚ´æ
     ArrayList *arrayList = (ArrayList *)malloc(sizeof(ArrayList));
     Asert(arrayList);
-    //ç”³è¯·æ•°ç»„çš„å†…å­˜
+    //ÉêÇëÊı×éµÄÄÚ´æ
     ArrayListValueEntry *data = (ArrayListValueEntry *)malloc(MAX_SIZE * sizeof(ArrayListValueEntry));
+    if (!data) {
+        free(arrayList);
+        return NULL;
+    }
     Asert(data);
     arrayList->data = data;
     arrayList->length = 0;
@@ -26,14 +32,15 @@ ArrayList * arrayList_init(){
 
 void arrayList_destroy(ArrayList *arrayList){
     if(arrayList!=NULL) {
-        free(arrayList->data); //é‡Šæ”¾æ•°ç»„å ç”¨çš„å†…å­˜
-        free(arrayList);       //é‡Šæ”¾ç»“æ„ä½“å ç”¨çš„å†…å­˜
+        free(arrayList->data); //ÊÍ·ÅÊı×éÕ¼ÓÃµÄÄÚ´æ
+        free(arrayList);       //ÊÍ·Å½á¹¹ÌåÕ¼ÓÃµÄÄÚ´æ
     }
+    assert(alloc_test_get_allocated() == 0);
 }
 
 void arrayList_show(ArrayList *arrayList){
     if(arrayList_getLength(arrayList) == 0) {
-        printf("è¯¥æ•°ç»„æ˜¯ç©ºçš„\n");
+        printf("¸ÃÊı×éÊÇ¿ÕµÄ\n");
     } else {
         for(int i = 0;i < arrayList->length;i++)
             printf("%d \t", (int) arrayList->data[i]);
@@ -44,9 +51,9 @@ void arrayList_show(ArrayList *arrayList){
 int arrayList_enlarge(ArrayList *arrayList){
     ArrayListValueEntry *newEntry;
     unsigned int newSize;
-    /* å°†å·²åˆ†é…çš„æ•°ç»„å†…å­˜ç©ºé—´æ‰©å±•ä¸ºåŸæ¥çš„2å€ */
+    /* ½«ÒÑ·ÖÅäµÄÊı×éÄÚ´æ¿Õ¼äÀ©Õ¹ÎªÔ­À´µÄ2±¶ */
     newSize = arrayList->_alloced * 2;
-    /* ç»™æ•°ç»„é‡æ–°åˆ†é…æ–°çš„å†…å­˜ç©ºé—´ */
+    /* ¸øÊı×éÖØĞÂ·ÖÅäĞÂµÄÄÚ´æ¿Õ¼ä */
     newEntry = realloc(arrayList->data, sizeof(ArrayListValueEntry) * newSize);
     if (newEntry == NULL) return -1;
     else {
@@ -57,20 +64,20 @@ int arrayList_enlarge(ArrayList *arrayList){
 }
 
 int arrayList_insert(ArrayList *arrayList, unsigned int index, ArrayListValueEntry data){
-    /*æ£€æŸ¥ä¸‹æ ‡æ˜¯å¦è¶Šç•Œ*/
+    /*¼ì²éÏÂ±êÊÇ·ñÔ½½ç*/
     if (index > arrayList->length) return -1;
     if (arrayList->length + 1 > arrayList->_alloced) {
         if (arrayList_enlarge(arrayList)) return -1;
     }
-    /* æŠŠå¾…æ’å…¥ä½ç½®åŠä¹‹åçš„æ•°ç»„å†…å®¹åç§»ä¸€ä½
+    /* °Ñ´ı²åÈëÎ»ÖÃ¼°Ö®ºóµÄÊı×éÄÚÈİºóÒÆÒ»Î»
      * memmove(void *_Dst,const void *_Src,size_t _Size);
-     * Dst: ç›®æ ‡åœ°å€
-     * Src: åˆå§‹åœ°å€
-     * _Size: åœ°å€æ•°
+     * Dst: Ä¿±êµØÖ·
+     * Src: ³õÊ¼µØÖ·
+     * _Size: µØÖ·Êı
      * */
     if (memmove(&arrayList->data[index + 1], &arrayList->data[index],
-            (arrayList->length - index) * sizeof(ArrayListValueEntry)) != NULL){
-        /*åœ¨ä¸‹æ ‡ä¸ºindexçš„ä½ç½®æ’å…¥æ•°æ® */
+                (arrayList->length - index) * sizeof(ArrayListValueEntry)) != NULL){
+        /*ÔÚÏÂ±êÎªindexµÄÎ»ÖÃ²åÈëÊı¾İ */
         arrayList->data[index] = data;
         arrayList->length++;
         return 0;
@@ -113,4 +120,46 @@ int arrayList_getIndexByValue(ArrayList *arrayList, ArrayListValueEntry data){
         if (arrayList->data[i] == data) return i;
     }
     return -1;
+}
+
+ArrayList* arrayList_sort(ArrayList* arrayList, int type){
+    return arrayList_quick_sort(arrayList, 0, arrayList-> length - 1, type);
+}
+
+ArrayList* arrayList_quick_sort(ArrayList* arrayList, int low, int high, int type){
+    if (low < high){
+        int position = arrayList_quick_sort_partition(arrayList, low, high, type);
+        arrayList_quick_sort(arrayList, position + 1, high, type);
+        arrayList_quick_sort(arrayList, low, position - 1, type);
+    }
+    return arrayList;
+}
+
+int arrayList_quick_sort_partition(ArrayList* arrayList, int low, int high, int type){
+    ArrayListValueEntry temp = arrayList->data[low];
+    while (low < high){
+        if (type == 0){
+            while (low < high && arrayList->data[high] >= temp){
+                high--;
+            }
+        }else {
+            while (low < high && arrayList->data[high] <= temp){
+                high--;
+            }
+        }
+        arrayList->data[low] = arrayList->data[high];
+
+        if (type == 0){
+            while (low < high && arrayList->data[low] <= temp){
+                low++;
+            }
+        }else{
+            while (low < high && arrayList->data[low] >= temp){
+                low++;
+            }
+        }
+        arrayList->data[high] = arrayList->data[low];
+    }
+    arrayList->data[low] = temp;
+    return low;
 }

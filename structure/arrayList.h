@@ -113,6 +113,11 @@ ArrayListValueEntry arrayList_getValueByIndex(ArrayList *arrayList, unsigned int
 */
 int arrayList_getIndexByValue(ArrayList *arrayList, ArrayListValueEntry data);
 
+ArrayList* arrayList_sort(ArrayList* arrayList, int type);
+
+ArrayList* arrayList_quick_sort(ArrayList* arrayList, int low, int high, int type);
+
+int arrayList_quick_sort_partition(ArrayList* arrayList, int low, int high, int type);
 
 #ifdef __cplusplus
 }

@@ -59,6 +59,8 @@ LinkListValue linkList_pop(LinkListEntry* linkList);
 
 LinkListValue linkList_peek(LinkListEntry* linkList);
 
+LinkListEntry* linkList_sort(LinkListEntry* linkList, int type, LinkListEqualFunc compare);
+
 #ifdef __cplusplus
 }
 #endif //__cplusplus

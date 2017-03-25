@@ -15,6 +15,10 @@ set(CMAKE_DEPENDS_CHECK_C
   "I:/DatabaseStructure/Project1/structure/linkList.c" "I:/DatabaseStructure/Project1/cmake-build-debug/CMakeFiles/Project1.dir/structure/linkList.c.obj"
   "I:/DatabaseStructure/Project1/structure/orthogonalList.c" "I:/DatabaseStructure/Project1/cmake-build-debug/CMakeFiles/Project1.dir/structure/orthogonalList.c.obj"
   "I:/DatabaseStructure/Project1/structure/polynomial.c" "I:/DatabaseStructure/Project1/cmake-build-debug/CMakeFiles/Project1.dir/structure/polynomial.c.obj"
+  "I:/DatabaseStructure/Project1/test/alloc-testing.c" "I:/DatabaseStructure/Project1/cmake-build-debug/CMakeFiles/Project1.dir/test/alloc-testing.c.obj"
+  "I:/DatabaseStructure/Project1/test/framework.c" "I:/DatabaseStructure/Project1/cmake-build-debug/CMakeFiles/Project1.dir/test/framework.c.obj"
+  "I:/DatabaseStructure/Project1/test/test-arrayList.c" "I:/DatabaseStructure/Project1/cmake-build-debug/CMakeFiles/Project1.dir/test/test-arrayList.c.obj"
+  "I:/DatabaseStructure/Project1/test/test-linkList.c" "I:/DatabaseStructure/Project1/cmake-build-debug/CMakeFiles/Project1.dir/test/test-linkList.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

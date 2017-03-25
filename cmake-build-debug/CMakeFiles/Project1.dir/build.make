@@ -320,6 +320,102 @@ CMakeFiles/Project1.dir/functions/hashTableOperation.c.obj.provides: CMakeFiles/
 CMakeFiles/Project1.dir/functions/hashTableOperation.c.obj.provides.build: CMakeFiles/Project1.dir/functions/hashTableOperation.c.obj
 
 
+CMakeFiles/Project1.dir/test/alloc-testing.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/test/alloc-testing.c.obj: ../test/alloc-testing.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/Project1.dir/test/alloc-testing.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\test\alloc-testing.c.obj   -c I:\DatabaseStructure\Project1\test\alloc-testing.c
+
+CMakeFiles/Project1.dir/test/alloc-testing.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/test/alloc-testing.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\test\alloc-testing.c > CMakeFiles\Project1.dir\test\alloc-testing.c.i
+
+CMakeFiles/Project1.dir/test/alloc-testing.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/test/alloc-testing.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\test\alloc-testing.c -o CMakeFiles\Project1.dir\test\alloc-testing.c.s
+
+CMakeFiles/Project1.dir/test/alloc-testing.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/test/alloc-testing.c.obj.requires
+
+CMakeFiles/Project1.dir/test/alloc-testing.c.obj.provides: CMakeFiles/Project1.dir/test/alloc-testing.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/alloc-testing.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/test/alloc-testing.c.obj.provides
+
+CMakeFiles/Project1.dir/test/alloc-testing.c.obj.provides.build: CMakeFiles/Project1.dir/test/alloc-testing.c.obj
+
+
+CMakeFiles/Project1.dir/test/framework.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/test/framework.c.obj: ../test/framework.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/Project1.dir/test/framework.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\test\framework.c.obj   -c I:\DatabaseStructure\Project1\test\framework.c
+
+CMakeFiles/Project1.dir/test/framework.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/test/framework.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\test\framework.c > CMakeFiles\Project1.dir\test\framework.c.i
+
+CMakeFiles/Project1.dir/test/framework.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/test/framework.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\test\framework.c -o CMakeFiles\Project1.dir\test\framework.c.s
+
+CMakeFiles/Project1.dir/test/framework.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/test/framework.c.obj.requires
+
+CMakeFiles/Project1.dir/test/framework.c.obj.provides: CMakeFiles/Project1.dir/test/framework.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/framework.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/test/framework.c.obj.provides
+
+CMakeFiles/Project1.dir/test/framework.c.obj.provides.build: CMakeFiles/Project1.dir/test/framework.c.obj
+
+
+CMakeFiles/Project1.dir/test/test-arrayList.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/test/test-arrayList.c.obj: ../test/test-arrayList.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/Project1.dir/test/test-arrayList.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\test\test-arrayList.c.obj   -c I:\DatabaseStructure\Project1\test\test-arrayList.c
+
+CMakeFiles/Project1.dir/test/test-arrayList.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/test/test-arrayList.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\test\test-arrayList.c > CMakeFiles\Project1.dir\test\test-arrayList.c.i
+
+CMakeFiles/Project1.dir/test/test-arrayList.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/test/test-arrayList.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\test\test-arrayList.c -o CMakeFiles\Project1.dir\test\test-arrayList.c.s
+
+CMakeFiles/Project1.dir/test/test-arrayList.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/test/test-arrayList.c.obj.requires
+
+CMakeFiles/Project1.dir/test/test-arrayList.c.obj.provides: CMakeFiles/Project1.dir/test/test-arrayList.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-arrayList.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/test/test-arrayList.c.obj.provides
+
+CMakeFiles/Project1.dir/test/test-arrayList.c.obj.provides.build: CMakeFiles/Project1.dir/test/test-arrayList.c.obj
+
+
+CMakeFiles/Project1.dir/test/test-linkList.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/test/test-linkList.c.obj: ../test/test-linkList.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/Project1.dir/test/test-linkList.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\test\test-linkList.c.obj   -c I:\DatabaseStructure\Project1\test\test-linkList.c
+
+CMakeFiles/Project1.dir/test/test-linkList.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/test/test-linkList.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\test\test-linkList.c > CMakeFiles\Project1.dir\test\test-linkList.c.i
+
+CMakeFiles/Project1.dir/test/test-linkList.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/test/test-linkList.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\test\test-linkList.c -o CMakeFiles\Project1.dir\test\test-linkList.c.s
+
+CMakeFiles/Project1.dir/test/test-linkList.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/test/test-linkList.c.obj.requires
+
+CMakeFiles/Project1.dir/test/test-linkList.c.obj.provides: CMakeFiles/Project1.dir/test/test-linkList.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-linkList.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/test/test-linkList.c.obj.provides
+
+CMakeFiles/Project1.dir/test/test-linkList.c.obj.provides.build: CMakeFiles/Project1.dir/test/test-linkList.c.obj
+
+
 # Object files for target Project1
 Project1_OBJECTS = \
 "CMakeFiles/Project1.dir/main.c.obj" \
@@ -332,7 +428,11 @@ Project1_OBJECTS = \
 "CMakeFiles/Project1.dir/structure/orthogonalList.c.obj" \
 "CMakeFiles/Project1.dir/functions/matrixCalculation.c.obj" \
 "CMakeFiles/Project1.dir/structure/hashTable.c.obj" \
-"CMakeFiles/Project1.dir/functions/hashTableOperation.c.obj"
+"CMakeFiles/Project1.dir/functions/hashTableOperation.c.obj" \
+"CMakeFiles/Project1.dir/test/alloc-testing.c.obj" \
+"CMakeFiles/Project1.dir/test/framework.c.obj" \
+"CMakeFiles/Project1.dir/test/test-arrayList.c.obj" \
+"CMakeFiles/Project1.dir/test/test-linkList.c.obj"
 
 # External object files for target Project1
 Project1_EXTERNAL_OBJECTS =
@@ -348,11 +448,15 @@ Project1.exe: CMakeFiles/Project1.dir/structure/orthogonalList.c.obj
 Project1.exe: CMakeFiles/Project1.dir/functions/matrixCalculation.c.obj
 Project1.exe: CMakeFiles/Project1.dir/structure/hashTable.c.obj
 Project1.exe: CMakeFiles/Project1.dir/functions/hashTableOperation.c.obj
+Project1.exe: CMakeFiles/Project1.dir/test/alloc-testing.c.obj
+Project1.exe: CMakeFiles/Project1.dir/test/framework.c.obj
+Project1.exe: CMakeFiles/Project1.dir/test/test-arrayList.c.obj
+Project1.exe: CMakeFiles/Project1.dir/test/test-linkList.c.obj
 Project1.exe: CMakeFiles/Project1.dir/build.make
 Project1.exe: CMakeFiles/Project1.dir/linklibs.rsp
 Project1.exe: CMakeFiles/Project1.dir/objects1.rsp
 Project1.exe: CMakeFiles/Project1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable Project1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C executable Project1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -371,6 +475,10 @@ CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/structure/orthogonalLi
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/functions/matrixCalculation.c.obj.requires
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/structure/hashTable.c.obj.requires
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/functions/hashTableOperation.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/test/alloc-testing.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/test/framework.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/test/test-arrayList.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/test/test-linkList.c.obj.requires
 
 .PHONY : CMakeFiles/Project1.dir/requires
 

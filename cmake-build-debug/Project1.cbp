@@ -145,6 +145,30 @@
 		<Unit filename="I:/DatabaseStructure/Project1/structure/polynomial.h">
 			<Option target="Project1"/>
 		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/test/alloc-testing.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/test/alloc-testing.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/test/framework.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/test/framework.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/test/test-arrayList.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/test/test-arrayList.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/test/test-linkList.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/test/test-linkList.h">
+			<Option target="Project1"/>
+		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

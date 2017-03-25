@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "test/test-arrayList.h"
 #include "structure/arrayList.h"
 #include "structure/linkList.h"
 #include "./functions/polyCalculation.h"
@@ -8,6 +9,7 @@
 #include "functions/matrixCalculation.h"
 #include "structure/orthogonalList.h"
 #include "functions/hashTableOperation.h"
+#include "test/test-linkList.h"
 
 int operationArrayList();
 int operationLinkList();
@@ -16,11 +18,14 @@ int operationStack();
 int linkList_compare(LinkListValue value1, LinkListValue value2);
 
 int main(){
+    //arrayListTest();
     //polyCalculation();
     //operationStack();
-
+    //operationArrayList();
+    //operationLinkList();
+    linkListTest();
     //expCalculation();
-    hashTableCalculation();
+    //hashTableCalculation();
 
     //matrixCalculation();
 
@@ -70,6 +75,10 @@ int operationLinkList(){
     linkList_deleteNode(linkList,linkList_getIndexEntryByIndex(linkList,0));
     linkList_show(linkList);
     linkList_getIndexEntryByData(linkList, 2 ,linkList_compare);
+    linkList_sort(linkList,0,linkList_compare);
+    linkList_show(linkList);
+    linkList_sort(linkList,1,linkList_compare);
+    linkList_show(linkList);
     printf("The length of the linkList is : %d\n",linkList_getLength(linkList));
     linkList_destroy(linkList);
 }
@@ -77,17 +86,31 @@ int operationLinkList(){
 int operationArrayList() {
     ArrayList *arrayList;
     arrayList = arrayList_init();
+    int entries[] = { 89, 4, 23, 42, 4, 16, 15, 4, 8, 99, 50, 30, 4 };
+    for (int i = 0 ;i<13;i++){
+        arrayList_append(arrayList,entries[i]);
+    }
+    /*
     arrayList_append(arrayList,1);
     arrayList_append(arrayList,5);
     arrayList_append(arrayList,2);
     arrayList_append(arrayList,7);
-    arrayList_append(arrayList,3);
+    arrayList_append(arrayList,3);*/
     arrayList_show(arrayList);
     printf("数组长度为：%d \n",arrayList_getLength(arrayList));
-    arrayList_insert(arrayList,2,201);
+    //arrayList_insert(arrayList,2,201);
+   // arrayList_show(arrayList);
+   // arrayList_remove(arrayList,4);
+   // arrayList_show(arrayList);
+
+    printf("升序排列的结果为：\n");
+    arrayList_sort(arrayList, 0);
     arrayList_show(arrayList);
-    arrayList_remove(arrayList,4);
+
+    printf("降序排列的结果为：\n");
+    arrayList_sort(arrayList, 1);
     arrayList_show(arrayList);
+
     printf("201 的数组索引为：%d \n",arrayList_getIndexByValue(arrayList,201));
     printf("数组索引为1的值为：%d \n",(int)arrayList_getValueByIndex(arrayList,1));
     arrayList_destroy(arrayList);

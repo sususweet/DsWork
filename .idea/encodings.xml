@@ -6,7 +6,8 @@
     <file url="file://$PROJECT_DIR$/functions/matrixCalculation.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/functions/polyCalculation.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/main.c" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/structure/linkList.c" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/structure/arrayList.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/structure/linkList.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/structure/orthogonalList.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/structure/polynomial.c" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
