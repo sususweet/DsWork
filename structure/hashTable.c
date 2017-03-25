@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "hashTable.h"
+#include "../test/alloc-testing.h"
 
 /*检查是否成功申请内存*/
 #define Asert(par) if(par==NULL) {\
@@ -59,7 +60,6 @@ HashTable* hash_table_list_new(HashTable* hashTable){
     return hashTable;
 }
 
-//TODO:Test this Part NO enlarge.
 HashTable* hash_table_enlarge(HashTable* hashTable){
     HashTable* newTable;
     newTable = hash_table_new((hashTable->table_size) * 3, hashTable->hash_func, hashTable->equal_func);
@@ -75,19 +75,21 @@ HashTable* hash_table_enlarge(HashTable* hashTable){
             rover = rover->next;
         }
     }
-
     return newTable;
 }
 
 HashTable* hash_table_insert(HashTable* hashTable, HashTableKey key, HashTableValue value){
     HashTableEntry *rover;
     unsigned int index;
-
+    HashTable* hashTableCache = hashTable;
     /* 如果表中的结点过多，冲突的可能性增大，散列表的查找效率下降，此时扩大表的大小 */
     /* 当已使用的结点数量超过散列表大小的1/3 */
     if ((hashTable->entries * 3) / hashTable->table_size > 0){
         if (!hash_table_enlarge(hashTable)) return hashTable;
-        else hashTable = hash_table_enlarge(hashTable);
+        else {
+            hashTable = hash_table_enlarge(hashTableCache);
+            hash_table_clear(hashTableCache);
+        }
     }
 
     /* 根据关键词找到对应链表头结点的下标 */
@@ -184,5 +186,6 @@ void hash_table_clear(HashTable* hashTable) {
         linkListNode = hashTable -> tableList[i];
         linkList_destroy (linkListNode);
     }
+    free(hashTable->tableList);
     free(hashTable);
 }

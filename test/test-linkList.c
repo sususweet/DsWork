@@ -171,6 +171,7 @@ void test_LinkListEntry_sort(void) {
 	assert(linkList_getIndexEntryByIndex(linkList, 0)->data == entries[0]);
 
 	linkList_destroy(linkList);
+
 }
 
 static UnitTestFunction tests[] = {
@@ -187,6 +188,7 @@ int linkListTest() {
 	variable4 = 7;
 
 	run_tests(tests);
+    assert(alloc_test_get_allocated() == 0);
 	return 0;
 }
 

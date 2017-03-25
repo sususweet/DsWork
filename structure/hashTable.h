@@ -12,7 +12,7 @@
 extern "C" {
 #endif
 
-#define MAX_SIZE 11111
+#define MAX_SIZE 999
 
 typedef struct _HashTable HashTable;
 typedef int HashTableKey;

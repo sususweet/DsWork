@@ -44,7 +44,7 @@ int hashTableCalculation(){
     hashTable = hash_table_insert(hashTable, 311, 523);
     hashTable = hash_table_insert(hashTable, 141, 213);
     hash_table_remove(hashTable, 143);
-    for (int i =0 ;i<10100;i++){
+    for (int i =0 ;i<990;i++){
         hashTable = hash_table_insert(hashTable, i, rand());
     }
 

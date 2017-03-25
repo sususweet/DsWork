@@ -23,13 +23,14 @@ int main(){
     //operationStack();
     //operationArrayList();
     //operationLinkList();
-    linkListTest();
+    //linkListTest();
     //expCalculation();
-    //hashTableCalculation();
+    hashTableCalculation();
 
     //matrixCalculation();
 
     //system("pause");
+
     return 0;
 }
 

@@ -40,7 +40,6 @@ void linkList_destroy(LinkListEntry *linkList){
         free(linkListTemp);
     }
     if(linkList != NULL) free(linkList);
-    assert(alloc_test_get_allocated() == 0);
 }
 
 /*************************************
