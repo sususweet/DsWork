@@ -73,8 +73,6 @@ stdlib.h
 -
 math.h
 -
-assert.h
--
 test/test-arrayList.h
 I:/DatabaseStructure/Project1/test/test-arrayList.h
 structure/arrayList.h
@@ -93,8 +91,6 @@ functions/hashTableOperation.h
 I:/DatabaseStructure/Project1/functions/hashTableOperation.h
 test/test-linkList.h
 I:/DatabaseStructure/Project1/test/test-linkList.h
-test/alloc-testing.h
-I:/DatabaseStructure/Project1/test/alloc-testing.h
 
 I:/DatabaseStructure/Project1/structure/arrayList.c
 stdlib.h
@@ -116,8 +112,6 @@ I:/DatabaseStructure/Project1/structure/hashTable.c
 stdlib.h
 -
 stdio.h
--
-assert.h
 -
 hashTable.h
 I:/DatabaseStructure/Project1/structure/hashTable.h

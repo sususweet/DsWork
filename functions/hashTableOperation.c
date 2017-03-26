@@ -5,7 +5,9 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <profileapi.h>
+#include <assert.h>
 #include "hashTableOperation.h"
+#include "../test/alloc-testing.h"
 
 /*检查是否成功申请内存*/
 #define Asert(par) if(par==NULL) {\
@@ -44,7 +46,7 @@ int hashTableCalculation(){
     hashTable = hash_table_insert(hashTable, 311, 523);
     hashTable = hash_table_insert(hashTable, 141, 213);
     hash_table_remove(hashTable, 143);
-    for (int i =0 ;i<990;i++){
+    for (int i =0 ;i<1190;i++){
         hashTable = hash_table_insert(hashTable, i, rand());
     }
 
@@ -70,5 +72,6 @@ int hashTableCalculation(){
     hash_table_show(hashTable);
     printf("tableSize:%d\n",hashTable->table_size);
     hash_table_clear(hashTable);
+    assert(alloc_test_get_allocated() == 0);
     return 0;
 }

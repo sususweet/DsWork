@@ -31,7 +31,6 @@ CMakeFiles/Project1.dir/main.c.obj: ../structure/arrayList.h
 CMakeFiles/Project1.dir/main.c.obj: ../structure/hashTable.h
 CMakeFiles/Project1.dir/main.c.obj: ../structure/linkList.h
 CMakeFiles/Project1.dir/main.c.obj: ../structure/orthogonalList.h
-CMakeFiles/Project1.dir/main.c.obj: ../test/alloc-testing.h
 CMakeFiles/Project1.dir/main.c.obj: ../test/test-arrayList.h
 CMakeFiles/Project1.dir/main.c.obj: ../test/test-linkList.h
 

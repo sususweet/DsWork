@@ -34,7 +34,7 @@ LinkListEntry* linkList_initList(){
 */
 void linkList_destroy(LinkListEntry *linkList){
     LinkListEntry *linkListTemp;
-    while (linkList != NULL && linkList->next != NULL){
+    while (linkList && linkList->next){
         linkListTemp = linkList -> next;
         linkList -> next = linkListTemp ->next;
         free(linkListTemp);

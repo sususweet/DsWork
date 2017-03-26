@@ -85,9 +85,10 @@ HashTable* hash_table_insert(HashTable* hashTable, HashTableKey key, HashTableVa
     /* 如果表中的结点过多，冲突的可能性增大，散列表的查找效率下降，此时扩大表的大小 */
     /* 当已使用的结点数量超过散列表大小的1/3 */
     if ((hashTable->entries * 3) / hashTable->table_size > 0){
-        if (!hash_table_enlarge(hashTable)) return hashTable;
+        HashTable* temp = hash_table_enlarge(hashTable);
+        if (!temp) return hashTable;
         else {
-            hashTable = hash_table_enlarge(hashTableCache);
+            hashTable = temp;
             hash_table_clear(hashTableCache);
         }
     }
