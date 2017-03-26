@@ -287,6 +287,13 @@ LinkListValue linkList_peek(LinkListEntry* linkList){
     }
 }
 
+/**
+*@desc: 链表操作—链表排序
+*@param: linkList->链表入口地址
+*@param: type->排序类型，0为升序，1为降序
+*@compare: compare->排序比较函数
+*@return: 排序后的链表入口地址
+*/
 LinkListEntry* linkList_sort(LinkListEntry* linkList, int type, LinkListEqualFunc compare){
     LinkListEntry *polyCache1, *polyCache2;
     if(linkList_getLength(linkList) == 0) {

@@ -22,10 +22,10 @@ int main(){
     //polyCalculation();
     //operationStack();
     //operationArrayList();
-    //operationLinkList();
+    operationLinkList();
     //linkListTest();
     //expCalculation();
-    hashTableCalculation();
+    //hashTableCalculation();
 
     //matrixCalculation();
 
@@ -76,8 +76,10 @@ int operationLinkList(){
     linkList_deleteNode(linkList,linkList_getIndexEntryByIndex(linkList,0));
     linkList_show(linkList);
     linkList_getIndexEntryByData(linkList, 2 ,linkList_compare);
+    printf("升序排列的结果为: ");
     linkList_sort(linkList,0,linkList_compare);
     linkList_show(linkList);
+    printf("降序排列的结果为: ");
     linkList_sort(linkList,1,linkList_compare);
     linkList_show(linkList);
     printf("The length of the linkList is : %d\n",linkList_getLength(linkList));

@@ -17,8 +17,6 @@ unsigned int hashTableHash(int size, LinkListKey key);
 
 int hashTableCalculation();
 
-
-
 #ifdef __cplusplus
 }
 #endif //__cplusplus

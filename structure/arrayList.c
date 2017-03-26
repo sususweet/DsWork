@@ -69,12 +69,12 @@ int arrayList_insert(ArrayList *arrayList, unsigned int index, ArrayListValueEnt
     if (arrayList->length + 1 > arrayList->_alloced) {
         if (arrayList_enlarge(arrayList)) return -1;
     }
-    /* 把待插入位置及之后的数组内容后移一位
+    /** 把待插入位置及之后的数组内容后移一位
      * memmove(void *_Dst,const void *_Src,size_t _Size);
      * Dst: 目标地址
      * Src: 初始地址
      * _Size: 地址数
-     * */
+     */
     if (memmove(&arrayList->data[index + 1], &arrayList->data[index],
                 (arrayList->length - index) * sizeof(ArrayListValueEntry)) != NULL){
         /*在下标为index的位置插入数据 */
@@ -126,16 +126,27 @@ ArrayList* arrayList_sort(ArrayList* arrayList, int type){
     return arrayList_quick_sort(arrayList, 0, arrayList-> length - 1, type);
 }
 
+/** 递归形式的快速排列
+ * 对顺序表tbl中的子序列tbl->[low...high]作快速排列
+ * */
 ArrayList* arrayList_quick_sort(ArrayList* arrayList, int low, int high, int type){
     if (low < high){
+        /* 将表一分为二 */
         int position = arrayList_quick_sort_partition(arrayList, low, high, type);
+        /* 对高子表递归排序 */
         arrayList_quick_sort(arrayList, position + 1, high, type);
+        /* 对低子表递归排序 */
         arrayList_quick_sort(arrayList, low, position - 1, type);
     }
     return arrayList;
 }
 
+/** 一趟快速排序
+ *  交换顺序表tbl中子表tbl->[low...high]的记录，
+ *  使支点记录到位，并返回其所在位置，此时在它之前（后）的记录均不大（小）于
+ */
 int arrayList_quick_sort_partition(ArrayList* arrayList, int low, int high, int type){
+    /* 保存支点记录 */
     ArrayListValueEntry temp = arrayList->data[low];
     while (low < high){
         if (type == 0){

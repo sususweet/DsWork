@@ -46,10 +46,11 @@ int hashTableCalculation(){
     hashTable = hash_table_insert(hashTable, 311, 523);
     hashTable = hash_table_insert(hashTable, 141, 213);
     hash_table_remove(hashTable, 143);
-    for (int i =0 ;i<1190;i++){
+    for (int i =0 ;i<1200;i++){
         hashTable = hash_table_insert(hashTable, i, rand());
     }
 
+    /*散列表查找性能测试开始*/
     LARGE_INTEGER nFreq;
     LARGE_INTEGER nBeginTime;
     LARGE_INTEGER nEndTime;
@@ -57,21 +58,22 @@ int hashTableCalculation(){
     QueryPerformanceFrequency(&nFreq);
     QueryPerformanceCounter(&nBeginTime);
 
-    HashTableValue value = hash_table_lookup(hashTable, 143);
+    HashTableValue value = hash_table_lookup(hashTable, 1223);
     if (value == NULL){
         printf("找不到key对应的value\n");
     }else{
         printf("value:%d\n",(int) value);
     }
-
     QueryPerformanceCounter(&nEndTime);
-
     time=(double)(nEndTime.QuadPart-nBeginTime.QuadPart)/(double)nFreq.QuadPart;
-    printf("%f\n",time);
+    printf("查找性能测试耗时：%f\n",time);
+    /*散列表查找性能测试结束*/
 
     hash_table_show(hashTable);
     printf("tableSize:%d\n",hashTable->table_size);
     hash_table_clear(hashTable);
+
+    /*散列表相关操作内存泄漏检测*/
     assert(alloc_test_get_allocated() == 0);
     return 0;
 }
