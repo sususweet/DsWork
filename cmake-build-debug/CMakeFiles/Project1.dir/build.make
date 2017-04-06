@@ -33,10 +33,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "E:\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = E:\JetBrains\CLion\bin\cmake\bin\cmake.exe
 
 # The command to remove a file.
-RM = "E:\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -E remove -f
+RM = E:\JetBrains\CLion\bin\cmake\bin\cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -416,6 +416,126 @@ CMakeFiles/Project1.dir/test/test-linkList.c.obj.provides: CMakeFiles/Project1.d
 CMakeFiles/Project1.dir/test/test-linkList.c.obj.provides.build: CMakeFiles/Project1.dir/test/test-linkList.c.obj
 
 
+CMakeFiles/Project1.dir/structure/binaryTree.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/structure/binaryTree.c.obj: ../structure/binaryTree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/Project1.dir/structure/binaryTree.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\structure\binaryTree.c.obj   -c I:\DatabaseStructure\Project1\structure\binaryTree.c
+
+CMakeFiles/Project1.dir/structure/binaryTree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/structure/binaryTree.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\structure\binaryTree.c > CMakeFiles\Project1.dir\structure\binaryTree.c.i
+
+CMakeFiles/Project1.dir/structure/binaryTree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/structure/binaryTree.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\structure\binaryTree.c -o CMakeFiles\Project1.dir\structure\binaryTree.c.s
+
+CMakeFiles/Project1.dir/structure/binaryTree.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/structure/binaryTree.c.obj.requires
+
+CMakeFiles/Project1.dir/structure/binaryTree.c.obj.provides: CMakeFiles/Project1.dir/structure/binaryTree.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/binaryTree.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/structure/binaryTree.c.obj.provides
+
+CMakeFiles/Project1.dir/structure/binaryTree.c.obj.provides.build: CMakeFiles/Project1.dir/structure/binaryTree.c.obj
+
+
+CMakeFiles/Project1.dir/test/test-binaryTree.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/test/test-binaryTree.c.obj: ../test/test-binaryTree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/Project1.dir/test/test-binaryTree.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\test\test-binaryTree.c.obj   -c I:\DatabaseStructure\Project1\test\test-binaryTree.c
+
+CMakeFiles/Project1.dir/test/test-binaryTree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/test/test-binaryTree.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\test\test-binaryTree.c > CMakeFiles\Project1.dir\test\test-binaryTree.c.i
+
+CMakeFiles/Project1.dir/test/test-binaryTree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/test/test-binaryTree.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\test\test-binaryTree.c -o CMakeFiles\Project1.dir\test\test-binaryTree.c.s
+
+CMakeFiles/Project1.dir/test/test-binaryTree.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/test/test-binaryTree.c.obj.requires
+
+CMakeFiles/Project1.dir/test/test-binaryTree.c.obj.provides: CMakeFiles/Project1.dir/test/test-binaryTree.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-binaryTree.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/test/test-binaryTree.c.obj.provides
+
+CMakeFiles/Project1.dir/test/test-binaryTree.c.obj.provides.build: CMakeFiles/Project1.dir/test/test-binaryTree.c.obj
+
+
+CMakeFiles/Project1.dir/functions/treeCalculator.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/functions/treeCalculator.c.obj: ../functions/treeCalculator.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/Project1.dir/functions/treeCalculator.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\functions\treeCalculator.c.obj   -c I:\DatabaseStructure\Project1\functions\treeCalculator.c
+
+CMakeFiles/Project1.dir/functions/treeCalculator.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/functions/treeCalculator.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\functions\treeCalculator.c > CMakeFiles\Project1.dir\functions\treeCalculator.c.i
+
+CMakeFiles/Project1.dir/functions/treeCalculator.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/functions/treeCalculator.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\functions\treeCalculator.c -o CMakeFiles\Project1.dir\functions\treeCalculator.c.s
+
+CMakeFiles/Project1.dir/functions/treeCalculator.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/functions/treeCalculator.c.obj.requires
+
+CMakeFiles/Project1.dir/functions/treeCalculator.c.obj.provides: CMakeFiles/Project1.dir/functions/treeCalculator.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/treeCalculator.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/functions/treeCalculator.c.obj.provides
+
+CMakeFiles/Project1.dir/functions/treeCalculator.c.obj.provides.build: CMakeFiles/Project1.dir/functions/treeCalculator.c.obj
+
+
+CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj: ../test/test-treeCalculator.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\test\test-treeCalculator.c.obj   -c I:\DatabaseStructure\Project1\test\test-treeCalculator.c
+
+CMakeFiles/Project1.dir/test/test-treeCalculator.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/test/test-treeCalculator.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\test\test-treeCalculator.c > CMakeFiles\Project1.dir\test\test-treeCalculator.c.i
+
+CMakeFiles/Project1.dir/test/test-treeCalculator.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/test/test-treeCalculator.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\test\test-treeCalculator.c -o CMakeFiles\Project1.dir\test\test-treeCalculator.c.s
+
+CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj.requires
+
+CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj.provides: CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj.provides
+
+CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj.provides.build: CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj
+
+
+CMakeFiles/Project1.dir/common/expressionBase.c.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/common/expressionBase.c.obj: ../common/expressionBase.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/Project1.dir/common/expressionBase.c.obj"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Project1.dir\common\expressionBase.c.obj   -c I:\DatabaseStructure\Project1\common\expressionBase.c
+
+CMakeFiles/Project1.dir/common/expressionBase.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Project1.dir/common/expressionBase.c.i"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E I:\DatabaseStructure\Project1\common\expressionBase.c > CMakeFiles\Project1.dir\common\expressionBase.c.i
+
+CMakeFiles/Project1.dir/common/expressionBase.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Project1.dir/common/expressionBase.c.s"
+	E:\Dev-Cpp\MinGW64\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S I:\DatabaseStructure\Project1\common\expressionBase.c -o CMakeFiles\Project1.dir\common\expressionBase.c.s
+
+CMakeFiles/Project1.dir/common/expressionBase.c.obj.requires:
+
+.PHONY : CMakeFiles/Project1.dir/common/expressionBase.c.obj.requires
+
+CMakeFiles/Project1.dir/common/expressionBase.c.obj.provides: CMakeFiles/Project1.dir/common/expressionBase.c.obj.requires
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/common/expressionBase.c.obj.provides.build
+.PHONY : CMakeFiles/Project1.dir/common/expressionBase.c.obj.provides
+
+CMakeFiles/Project1.dir/common/expressionBase.c.obj.provides.build: CMakeFiles/Project1.dir/common/expressionBase.c.obj
+
+
 # Object files for target Project1
 Project1_OBJECTS = \
 "CMakeFiles/Project1.dir/main.c.obj" \
@@ -432,7 +552,12 @@ Project1_OBJECTS = \
 "CMakeFiles/Project1.dir/test/alloc-testing.c.obj" \
 "CMakeFiles/Project1.dir/test/framework.c.obj" \
 "CMakeFiles/Project1.dir/test/test-arrayList.c.obj" \
-"CMakeFiles/Project1.dir/test/test-linkList.c.obj"
+"CMakeFiles/Project1.dir/test/test-linkList.c.obj" \
+"CMakeFiles/Project1.dir/structure/binaryTree.c.obj" \
+"CMakeFiles/Project1.dir/test/test-binaryTree.c.obj" \
+"CMakeFiles/Project1.dir/functions/treeCalculator.c.obj" \
+"CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj" \
+"CMakeFiles/Project1.dir/common/expressionBase.c.obj"
 
 # External object files for target Project1
 Project1_EXTERNAL_OBJECTS =
@@ -452,11 +577,16 @@ Project1.exe: CMakeFiles/Project1.dir/test/alloc-testing.c.obj
 Project1.exe: CMakeFiles/Project1.dir/test/framework.c.obj
 Project1.exe: CMakeFiles/Project1.dir/test/test-arrayList.c.obj
 Project1.exe: CMakeFiles/Project1.dir/test/test-linkList.c.obj
+Project1.exe: CMakeFiles/Project1.dir/structure/binaryTree.c.obj
+Project1.exe: CMakeFiles/Project1.dir/test/test-binaryTree.c.obj
+Project1.exe: CMakeFiles/Project1.dir/functions/treeCalculator.c.obj
+Project1.exe: CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj
+Project1.exe: CMakeFiles/Project1.dir/common/expressionBase.c.obj
 Project1.exe: CMakeFiles/Project1.dir/build.make
 Project1.exe: CMakeFiles/Project1.dir/linklibs.rsp
 Project1.exe: CMakeFiles/Project1.dir/objects1.rsp
 Project1.exe: CMakeFiles/Project1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C executable Project1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=I:\DatabaseStructure\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking C executable Project1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -479,6 +609,11 @@ CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/test/alloc-testing.c.o
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/test/framework.c.obj.requires
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/test/test-arrayList.c.obj.requires
 CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/test/test-linkList.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/structure/binaryTree.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/test/test-binaryTree.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/functions/treeCalculator.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj.requires
+CMakeFiles/Project1.dir/requires: CMakeFiles/Project1.dir/common/expressionBase.c.obj.requires
 
 .PHONY : CMakeFiles/Project1.dir/requires
 

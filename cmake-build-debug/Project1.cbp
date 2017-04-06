@@ -88,6 +88,12 @@
 		<Unit filename="I:/DatabaseStructure/Project1/common/errorHandler.h">
 			<Option target="Project1"/>
 		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/common/expressionBase.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/common/expressionBase.h">
+			<Option target="Project1"/>
+		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/functions/expressionCalculation.c">
 			<Option target="Project1"/>
 		</Unit>
@@ -112,6 +118,12 @@
 		<Unit filename="I:/DatabaseStructure/Project1/functions/polyCalculation.h">
 			<Option target="Project1"/>
 		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/functions/treeCalculator.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/functions/treeCalculator.h">
+			<Option target="Project1"/>
+		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/main.c">
 			<Option target="Project1"/>
 		</Unit>
@@ -119,6 +131,12 @@
 			<Option target="Project1"/>
 		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/structure/arrayList.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/structure/binaryTree.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/structure/binaryTree.h">
 			<Option target="Project1"/>
 		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/structure/hashTable.c">
@@ -163,10 +181,22 @@
 		<Unit filename="I:/DatabaseStructure/Project1/test/test-arrayList.h">
 			<Option target="Project1"/>
 		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/test/test-binaryTree.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/test/test-binaryTree.h">
+			<Option target="Project1"/>
+		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/test/test-linkList.c">
 			<Option target="Project1"/>
 		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/test/test-linkList.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/test/test-treeCalculator.c">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="I:/DatabaseStructure/Project1/test/test-treeCalculator.h">
 			<Option target="Project1"/>
 		</Unit>
 		<Unit filename="I:/DatabaseStructure/Project1/CMakeLists.txt">

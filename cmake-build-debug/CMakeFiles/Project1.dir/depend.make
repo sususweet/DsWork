@@ -3,6 +3,10 @@
 
 CMakeFiles/Project1.dir/common/errorHandler.c.obj: ../common/errorHandler.c
 
+CMakeFiles/Project1.dir/common/expressionBase.c.obj: ../common/expressionBase.c
+CMakeFiles/Project1.dir/common/expressionBase.c.obj: ../common/expressionBase.h
+
+CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../common/expressionBase.h
 CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../functions/expressionCalculation.c
 CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../functions/expressionCalculation.h
 CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj: ../structure/linkList.h
@@ -22,21 +26,33 @@ CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../functions/polyCalcul
 CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../structure/linkList.h
 CMakeFiles/Project1.dir/functions/polyCalculation.c.obj: ../structure/polynomial.h
 
+CMakeFiles/Project1.dir/functions/treeCalculator.c.obj: ../common/expressionBase.h
+CMakeFiles/Project1.dir/functions/treeCalculator.c.obj: ../functions/treeCalculator.c
+CMakeFiles/Project1.dir/functions/treeCalculator.c.obj: ../functions/treeCalculator.h
+CMakeFiles/Project1.dir/functions/treeCalculator.c.obj: ../structure/binaryTree.h
+
 CMakeFiles/Project1.dir/main.c.obj: .././functions/polyCalculation.h
 CMakeFiles/Project1.dir/main.c.obj: ../functions/expressionCalculation.h
 CMakeFiles/Project1.dir/main.c.obj: ../functions/hashTableOperation.h
 CMakeFiles/Project1.dir/main.c.obj: ../functions/matrixCalculation.h
+CMakeFiles/Project1.dir/main.c.obj: ../functions/treeCalculator.h
 CMakeFiles/Project1.dir/main.c.obj: ../main.c
 CMakeFiles/Project1.dir/main.c.obj: ../structure/arrayList.h
+CMakeFiles/Project1.dir/main.c.obj: ../structure/binaryTree.h
 CMakeFiles/Project1.dir/main.c.obj: ../structure/hashTable.h
 CMakeFiles/Project1.dir/main.c.obj: ../structure/linkList.h
 CMakeFiles/Project1.dir/main.c.obj: ../structure/orthogonalList.h
 CMakeFiles/Project1.dir/main.c.obj: ../test/test-arrayList.h
+CMakeFiles/Project1.dir/main.c.obj: ../test/test-binaryTree.h
 CMakeFiles/Project1.dir/main.c.obj: ../test/test-linkList.h
+CMakeFiles/Project1.dir/main.c.obj: ../test/test-treeCalculator.h
 
 CMakeFiles/Project1.dir/structure/arrayList.c.obj: ../structure/arrayList.c
 CMakeFiles/Project1.dir/structure/arrayList.c.obj: ../structure/arrayList.h
 CMakeFiles/Project1.dir/structure/arrayList.c.obj: ../test/alloc-testing.h
+
+CMakeFiles/Project1.dir/structure/binaryTree.c.obj: ../structure/binaryTree.c
+CMakeFiles/Project1.dir/structure/binaryTree.c.obj: ../structure/binaryTree.h
 
 CMakeFiles/Project1.dir/structure/hashTable.c.obj: ../structure/hashTable.c
 CMakeFiles/Project1.dir/structure/hashTable.c.obj: ../structure/hashTable.h
@@ -67,9 +83,19 @@ CMakeFiles/Project1.dir/test/test-arrayList.c.obj: ../test/framework.h
 CMakeFiles/Project1.dir/test/test-arrayList.c.obj: ../test/test-arrayList.c
 CMakeFiles/Project1.dir/test/test-arrayList.c.obj: ../test/test-arrayList.h
 
+CMakeFiles/Project1.dir/test/test-binaryTree.c.obj: ../structure/binaryTree.h
+CMakeFiles/Project1.dir/test/test-binaryTree.c.obj: ../test/alloc-testing.h
+CMakeFiles/Project1.dir/test/test-binaryTree.c.obj: ../test/test-binaryTree.c
+CMakeFiles/Project1.dir/test/test-binaryTree.c.obj: ../test/test-binaryTree.h
+
 CMakeFiles/Project1.dir/test/test-linkList.c.obj: ../structure/linkList.h
 CMakeFiles/Project1.dir/test/test-linkList.c.obj: ../test/alloc-testing.h
 CMakeFiles/Project1.dir/test/test-linkList.c.obj: ../test/framework.h
 CMakeFiles/Project1.dir/test/test-linkList.c.obj: ../test/test-linkList.c
 CMakeFiles/Project1.dir/test/test-linkList.c.obj: ../test/test-linkList.h
+
+CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj: ../functions/treeCalculator.h
+CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj: ../structure/binaryTree.h
+CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj: ../test/test-treeCalculator.c
+CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj: ../test/test-treeCalculator.h
 

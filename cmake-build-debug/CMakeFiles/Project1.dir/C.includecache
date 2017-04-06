@@ -10,6 +10,16 @@ I:/DatabaseStructure/Project1/./functions/polyCalculation.h
 
 I:/DatabaseStructure/Project1/common/errorHandler.c
 
+I:/DatabaseStructure/Project1/common/expressionBase.c
+math.h
+-
+string.h
+-
+expressionBase.h
+I:/DatabaseStructure/Project1/common/expressionBase.h
+
+I:/DatabaseStructure/Project1/common/expressionBase.h
+
 I:/DatabaseStructure/Project1/functions/expressionCalculation.c
 stdio.h
 -
@@ -21,6 +31,8 @@ stdlib.h
 -
 expressionCalculation.h
 I:/DatabaseStructure/Project1/functions/expressionCalculation.h
+../common/expressionBase.h
+I:/DatabaseStructure/Project1/common/expressionBase.h
 
 I:/DatabaseStructure/Project1/functions/expressionCalculation.h
 ../structure/linkList.h
@@ -66,6 +78,26 @@ I:/DatabaseStructure/Project1/functions/polyCalculation.h
 
 I:/DatabaseStructure/Project1/functions/polyCalculation.h
 
+I:/DatabaseStructure/Project1/functions/treeCalculator.c
+stdio.h
+-
+string.h
+-
+stdbool.h
+-
+stdlib.h
+-
+treeCalculator.h
+I:/DatabaseStructure/Project1/functions/treeCalculator.h
+../common/expressionBase.h
+I:/DatabaseStructure/Project1/common/expressionBase.h
+
+I:/DatabaseStructure/Project1/functions/treeCalculator.h
+../structure/binaryTree.h
+I:/DatabaseStructure/Project1/structure/binaryTree.h
+stdbool.h
+I:/DatabaseStructure/Project1/functions/stdbool.h
+
 I:/DatabaseStructure/Project1/main.c
 stdio.h
 -
@@ -91,6 +123,10 @@ functions/hashTableOperation.h
 I:/DatabaseStructure/Project1/functions/hashTableOperation.h
 test/test-linkList.h
 I:/DatabaseStructure/Project1/test/test-linkList.h
+test/test-binaryTree.h
+I:/DatabaseStructure/Project1/test/test-binaryTree.h
+test/test-treeCalculator.h
+I:/DatabaseStructure/Project1/test/test-treeCalculator.h
 
 I:/DatabaseStructure/Project1/structure/arrayList.c
 stdlib.h
@@ -107,6 +143,16 @@ I:/DatabaseStructure/Project1/structure/string.h
 I:/DatabaseStructure/Project1/test/alloc-testing.h
 
 I:/DatabaseStructure/Project1/structure/arrayList.h
+
+I:/DatabaseStructure/Project1/structure/binaryTree.c
+stdlib.h
+-
+stdio.h
+-
+binaryTree.h
+I:/DatabaseStructure/Project1/structure/binaryTree.h
+
+I:/DatabaseStructure/Project1/structure/binaryTree.h
 
 I:/DatabaseStructure/Project1/structure/hashTable.c
 stdlib.h
@@ -204,6 +250,20 @@ I:/DatabaseStructure/Project1/structure/arrayList.h
 
 I:/DatabaseStructure/Project1/test/test-arrayList.h
 
+I:/DatabaseStructure/Project1/test/test-binaryTree.c
+assert.h
+-
+stdio.h
+-
+../structure/binaryTree.h
+I:/DatabaseStructure/Project1/structure/binaryTree.h
+test-binaryTree.h
+I:/DatabaseStructure/Project1/test/test-binaryTree.h
+alloc-testing.h
+I:/DatabaseStructure/Project1/test/alloc-testing.h
+
+I:/DatabaseStructure/Project1/test/test-binaryTree.h
+
 I:/DatabaseStructure/Project1/test/test-linkList.c
 stdio.h
 -
@@ -219,4 +279,18 @@ I:/DatabaseStructure/Project1/test/framework.h
 I:/DatabaseStructure/Project1/structure/linkList.h
 
 I:/DatabaseStructure/Project1/test/test-linkList.h
+
+I:/DatabaseStructure/Project1/test/test-treeCalculator.c
+stdio.h
+-
+assert.h
+-
+math.h
+-
+test-treeCalculator.h
+I:/DatabaseStructure/Project1/test/test-treeCalculator.h
+
+I:/DatabaseStructure/Project1/test/test-treeCalculator.h
+../functions/treeCalculator.h
+I:/DatabaseStructure/Project1/functions/treeCalculator.h
 

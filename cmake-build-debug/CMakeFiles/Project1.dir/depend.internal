@@ -3,7 +3,11 @@
 
 CMakeFiles/Project1.dir/common/errorHandler.c.obj
  I:/DatabaseStructure/Project1/common/errorHandler.c
+CMakeFiles/Project1.dir/common/expressionBase.c.obj
+ I:/DatabaseStructure/Project1/common/expressionBase.c
+ I:/DatabaseStructure/Project1/common/expressionBase.h
 CMakeFiles/Project1.dir/functions/expressionCalculation.c.obj
+ I:/DatabaseStructure/Project1/common/expressionBase.h
  I:/DatabaseStructure/Project1/functions/expressionCalculation.c
  I:/DatabaseStructure/Project1/functions/expressionCalculation.h
  I:/DatabaseStructure/Project1/structure/linkList.h
@@ -22,22 +26,34 @@ CMakeFiles/Project1.dir/functions/polyCalculation.c.obj
  I:/DatabaseStructure/Project1/functions/polyCalculation.h
  I:/DatabaseStructure/Project1/structure/linkList.h
  I:/DatabaseStructure/Project1/structure/polynomial.h
+CMakeFiles/Project1.dir/functions/treeCalculator.c.obj
+ I:/DatabaseStructure/Project1/common/expressionBase.h
+ I:/DatabaseStructure/Project1/functions/treeCalculator.c
+ I:/DatabaseStructure/Project1/functions/treeCalculator.h
+ I:/DatabaseStructure/Project1/structure/binaryTree.h
 CMakeFiles/Project1.dir/main.c.obj
  I:/DatabaseStructure/Project1/./functions/polyCalculation.h
  I:/DatabaseStructure/Project1/functions/expressionCalculation.h
  I:/DatabaseStructure/Project1/functions/hashTableOperation.h
  I:/DatabaseStructure/Project1/functions/matrixCalculation.h
+ I:/DatabaseStructure/Project1/functions/treeCalculator.h
  I:/DatabaseStructure/Project1/main.c
  I:/DatabaseStructure/Project1/structure/arrayList.h
+ I:/DatabaseStructure/Project1/structure/binaryTree.h
  I:/DatabaseStructure/Project1/structure/hashTable.h
  I:/DatabaseStructure/Project1/structure/linkList.h
  I:/DatabaseStructure/Project1/structure/orthogonalList.h
  I:/DatabaseStructure/Project1/test/test-arrayList.h
+ I:/DatabaseStructure/Project1/test/test-binaryTree.h
  I:/DatabaseStructure/Project1/test/test-linkList.h
+ I:/DatabaseStructure/Project1/test/test-treeCalculator.h
 CMakeFiles/Project1.dir/structure/arrayList.c.obj
  I:/DatabaseStructure/Project1/structure/arrayList.c
  I:/DatabaseStructure/Project1/structure/arrayList.h
  I:/DatabaseStructure/Project1/test/alloc-testing.h
+CMakeFiles/Project1.dir/structure/binaryTree.c.obj
+ I:/DatabaseStructure/Project1/structure/binaryTree.c
+ I:/DatabaseStructure/Project1/structure/binaryTree.h
 CMakeFiles/Project1.dir/structure/hashTable.c.obj
  I:/DatabaseStructure/Project1/structure/hashTable.c
  I:/DatabaseStructure/Project1/structure/hashTable.h
@@ -67,9 +83,19 @@ CMakeFiles/Project1.dir/test/test-arrayList.c.obj
  I:/DatabaseStructure/Project1/test/framework.h
  I:/DatabaseStructure/Project1/test/test-arrayList.c
  I:/DatabaseStructure/Project1/test/test-arrayList.h
+CMakeFiles/Project1.dir/test/test-binaryTree.c.obj
+ I:/DatabaseStructure/Project1/structure/binaryTree.h
+ I:/DatabaseStructure/Project1/test/alloc-testing.h
+ I:/DatabaseStructure/Project1/test/test-binaryTree.c
+ I:/DatabaseStructure/Project1/test/test-binaryTree.h
 CMakeFiles/Project1.dir/test/test-linkList.c.obj
  I:/DatabaseStructure/Project1/structure/linkList.h
  I:/DatabaseStructure/Project1/test/alloc-testing.h
  I:/DatabaseStructure/Project1/test/framework.h
  I:/DatabaseStructure/Project1/test/test-linkList.c
  I:/DatabaseStructure/Project1/test/test-linkList.h
+CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj
+ I:/DatabaseStructure/Project1/functions/treeCalculator.h
+ I:/DatabaseStructure/Project1/structure/binaryTree.h
+ I:/DatabaseStructure/Project1/test/test-treeCalculator.c
+ I:/DatabaseStructure/Project1/test/test-treeCalculator.h

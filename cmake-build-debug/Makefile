@@ -38,10 +38,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "E:\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = E:\JetBrains\CLion\bin\cmake\bin\cmake.exe
 
 # The command to remove a file.
-RM = "E:\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -E remove -f
+RM = E:\JetBrains\CLion\bin\cmake\bin\cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = I:\DatabaseStructure\Project1\cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"E:\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	E:\JetBrains\CLion\bin\cmake\bin\cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,7 +69,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"E:\JetBrains\CLion 2016.3.3\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	E:\JetBrains\CLion\bin\cmake\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -148,6 +148,33 @@ common/errorHandler.s: common/errorHandler.c.s
 common/errorHandler.c.s:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/common/errorHandler.c.s
 .PHONY : common/errorHandler.c.s
+
+common/expressionBase.obj: common/expressionBase.c.obj
+
+.PHONY : common/expressionBase.obj
+
+# target to build an object file
+common/expressionBase.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/common/expressionBase.c.obj
+.PHONY : common/expressionBase.c.obj
+
+common/expressionBase.i: common/expressionBase.c.i
+
+.PHONY : common/expressionBase.i
+
+# target to preprocess a source file
+common/expressionBase.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/common/expressionBase.c.i
+.PHONY : common/expressionBase.c.i
+
+common/expressionBase.s: common/expressionBase.c.s
+
+.PHONY : common/expressionBase.s
+
+# target to generate assembly for a file
+common/expressionBase.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/common/expressionBase.c.s
+.PHONY : common/expressionBase.c.s
 
 functions/expressionCalculation.obj: functions/expressionCalculation.c.obj
 
@@ -257,6 +284,33 @@ functions/polyCalculation.c.s:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/polyCalculation.c.s
 .PHONY : functions/polyCalculation.c.s
 
+functions/treeCalculator.obj: functions/treeCalculator.c.obj
+
+.PHONY : functions/treeCalculator.obj
+
+# target to build an object file
+functions/treeCalculator.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/treeCalculator.c.obj
+.PHONY : functions/treeCalculator.c.obj
+
+functions/treeCalculator.i: functions/treeCalculator.c.i
+
+.PHONY : functions/treeCalculator.i
+
+# target to preprocess a source file
+functions/treeCalculator.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/treeCalculator.c.i
+.PHONY : functions/treeCalculator.c.i
+
+functions/treeCalculator.s: functions/treeCalculator.c.s
+
+.PHONY : functions/treeCalculator.s
+
+# target to generate assembly for a file
+functions/treeCalculator.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/functions/treeCalculator.c.s
+.PHONY : functions/treeCalculator.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -310,6 +364,33 @@ structure/arrayList.s: structure/arrayList.c.s
 structure/arrayList.c.s:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/arrayList.c.s
 .PHONY : structure/arrayList.c.s
+
+structure/binaryTree.obj: structure/binaryTree.c.obj
+
+.PHONY : structure/binaryTree.obj
+
+# target to build an object file
+structure/binaryTree.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/binaryTree.c.obj
+.PHONY : structure/binaryTree.c.obj
+
+structure/binaryTree.i: structure/binaryTree.c.i
+
+.PHONY : structure/binaryTree.i
+
+# target to preprocess a source file
+structure/binaryTree.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/binaryTree.c.i
+.PHONY : structure/binaryTree.c.i
+
+structure/binaryTree.s: structure/binaryTree.c.s
+
+.PHONY : structure/binaryTree.s
+
+# target to generate assembly for a file
+structure/binaryTree.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/structure/binaryTree.c.s
+.PHONY : structure/binaryTree.c.s
 
 structure/hashTable.obj: structure/hashTable.c.obj
 
@@ -500,6 +581,33 @@ test/test-arrayList.c.s:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-arrayList.c.s
 .PHONY : test/test-arrayList.c.s
 
+test/test-binaryTree.obj: test/test-binaryTree.c.obj
+
+.PHONY : test/test-binaryTree.obj
+
+# target to build an object file
+test/test-binaryTree.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-binaryTree.c.obj
+.PHONY : test/test-binaryTree.c.obj
+
+test/test-binaryTree.i: test/test-binaryTree.c.i
+
+.PHONY : test/test-binaryTree.i
+
+# target to preprocess a source file
+test/test-binaryTree.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-binaryTree.c.i
+.PHONY : test/test-binaryTree.c.i
+
+test/test-binaryTree.s: test/test-binaryTree.c.s
+
+.PHONY : test/test-binaryTree.s
+
+# target to generate assembly for a file
+test/test-binaryTree.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-binaryTree.c.s
+.PHONY : test/test-binaryTree.c.s
+
 test/test-linkList.obj: test/test-linkList.c.obj
 
 .PHONY : test/test-linkList.obj
@@ -527,6 +635,33 @@ test/test-linkList.c.s:
 	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-linkList.c.s
 .PHONY : test/test-linkList.c.s
 
+test/test-treeCalculator.obj: test/test-treeCalculator.c.obj
+
+.PHONY : test/test-treeCalculator.obj
+
+# target to build an object file
+test/test-treeCalculator.c.obj:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-treeCalculator.c.obj
+.PHONY : test/test-treeCalculator.c.obj
+
+test/test-treeCalculator.i: test/test-treeCalculator.c.i
+
+.PHONY : test/test-treeCalculator.i
+
+# target to preprocess a source file
+test/test-treeCalculator.c.i:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-treeCalculator.c.i
+.PHONY : test/test-treeCalculator.c.i
+
+test/test-treeCalculator.s: test/test-treeCalculator.c.s
+
+.PHONY : test/test-treeCalculator.s
+
+# target to generate assembly for a file
+test/test-treeCalculator.c.s:
+	$(MAKE) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/test/test-treeCalculator.c.s
+.PHONY : test/test-treeCalculator.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -539,6 +674,9 @@ help:
 	@echo ... common/errorHandler.obj
 	@echo ... common/errorHandler.i
 	@echo ... common/errorHandler.s
+	@echo ... common/expressionBase.obj
+	@echo ... common/expressionBase.i
+	@echo ... common/expressionBase.s
 	@echo ... functions/expressionCalculation.obj
 	@echo ... functions/expressionCalculation.i
 	@echo ... functions/expressionCalculation.s
@@ -551,12 +689,18 @@ help:
 	@echo ... functions/polyCalculation.obj
 	@echo ... functions/polyCalculation.i
 	@echo ... functions/polyCalculation.s
+	@echo ... functions/treeCalculator.obj
+	@echo ... functions/treeCalculator.i
+	@echo ... functions/treeCalculator.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... structure/arrayList.obj
 	@echo ... structure/arrayList.i
 	@echo ... structure/arrayList.s
+	@echo ... structure/binaryTree.obj
+	@echo ... structure/binaryTree.i
+	@echo ... structure/binaryTree.s
 	@echo ... structure/hashTable.obj
 	@echo ... structure/hashTable.i
 	@echo ... structure/hashTable.s
@@ -578,9 +722,15 @@ help:
 	@echo ... test/test-arrayList.obj
 	@echo ... test/test-arrayList.i
 	@echo ... test/test-arrayList.s
+	@echo ... test/test-binaryTree.obj
+	@echo ... test/test-binaryTree.i
+	@echo ... test/test-binaryTree.s
 	@echo ... test/test-linkList.obj
 	@echo ... test/test-linkList.i
 	@echo ... test/test-linkList.s
+	@echo ... test/test-treeCalculator.obj
+	@echo ... test/test-treeCalculator.i
+	@echo ... test/test-treeCalculator.s
 .PHONY : help
 
 

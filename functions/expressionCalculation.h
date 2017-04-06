@@ -15,16 +15,6 @@ int expCalculation();
 
 double* expCal(char*);    /* 计算表达式的值 */
 
-char* shortenExpression(char* exp);
-
-double numDoubleCal(double, double, char);    /* 计算两个数的运算和 */
-
-double numSingleCal(double val1, char op);
-
-int getPriority(char op);
-
-char* strReplace(char strRes[],char from[], char to[]);
-
 #ifdef __cplusplus
 }
 #endif //__cplusplus

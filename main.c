@@ -10,6 +10,8 @@
 #include "structure/orthogonalList.h"
 #include "functions/hashTableOperation.h"
 #include "test/test-linkList.h"
+#include "test/test-binaryTree.h"
+#include "test/test-treeCalculator.h"
 
 int operationArrayList();
 int operationLinkList();
@@ -22,11 +24,12 @@ int main(){
     //polyCalculation();
     //operationStack();
     //operationArrayList();
-    operationLinkList();
+    //operationLinkList();
     //linkListTest();
     //expCalculation();
     //hashTableCalculation();
-
+    //binaryTreeTest();
+    treeCalculatorTest();
     //matrixCalculation();
 
     //system("pause");

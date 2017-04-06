@@ -15,11 +15,11 @@
                 return NULL;}
 
 /**
- * @desc: 散列中链表增加节点
- * @param: insertIndex -> 链表节点插入地址
- * @param: key -> 待插入关键字
- * @param: data-> 待插入数据指针
- * @return: 插入的节点地址
+ * @desc 散列中链表增加节点
+ * @param insertIndex -> 链表节点插入地址
+ * @param key -> 待插入关键字
+ * @param data-> 待插入数据指针
+ * @return 插入的节点地址
  */
 LinkListEntry* hashLinkList_addNode(LinkListEntry *insertIndex, HashTableKey key, HashTableValue *data){
     if (insertIndex == NULL) return NULL;
@@ -34,11 +34,11 @@ LinkListEntry* hashLinkList_addNode(LinkListEntry *insertIndex, HashTableKey key
 }
 
 /**
- * @desc: 新建散列表
- * @param: size -> 散列表大小，开放接口以备再散列复用函数
- * @param: hash_func -> 散列计算函数
- * @param: equal_func-> 判key相等函数
- * @return: 新建的散列表地址
+ * @desc 新建散列表
+ * @param size -> 散列表大小，开放接口以备再散列复用函数
+ * @param hash_func -> 散列计算函数
+ * @param equal_func-> 判key相等函数
+ * @return 新建的散列表地址
  */
 HashTable* hash_table_new(unsigned int size,HashTableHashFunc hash_func, HashTableEqualFunc equal_func){
     HashTable* hashTable;
@@ -62,9 +62,9 @@ HashTable* hash_table_new(unsigned int size,HashTableHashFunc hash_func, HashTab
 }
 
 /**
- * @desc: 给每个结点分配内存空间，结点数量为table_size
- * @param: hashTable -> 散列表地址
- * @return: 散列表地址
+ * @desc 给每个结点分配内存空间，结点数量为table_size
+ * @param hashTable -> 散列表地址
+ * @return 散列表地址
  */
 HashTable* hash_table_list_new(HashTable* hashTable){
     hashTable->tableList = (HashTableEntry**) malloc(hashTable->table_size * sizeof(HashTableEntry*));
@@ -82,9 +82,9 @@ HashTable* hash_table_list_new(HashTable* hashTable){
 }
 
 /**
- * @desc: 给散列表再散列，表的大小扩充到原来的3倍
- * @param: hashTable -> 散列表地址
- * @return: 再散列后的散列表地址
+ * @desc 给散列表再散列，表的大小扩充到原来的3倍
+ * @param hashTable -> 散列表地址
+ * @return 再散列后的散列表地址
  */
 HashTable* hash_table_enlarge(HashTable* hashTable){
     HashTable* newTable;
@@ -105,11 +105,11 @@ HashTable* hash_table_enlarge(HashTable* hashTable){
 }
 
 /**
- * @desc: 给散列表插入元素
- * @param: hashTable -> 散列表地址
- * @param: key -> 元素关键字
- * @param: value -> 元素的值
- * @return: 散列表地址
+ * @desc 给散列表插入元素
+ * @param hashTable -> 散列表地址
+ * @param key -> 元素关键字
+ * @param value -> 元素的值
+ * @return 散列表地址
  */
 HashTable* hash_table_insert(HashTable* hashTable, HashTableKey key, HashTableValue value){
     HashTableEntry *rover;
@@ -161,10 +161,10 @@ HashTable* hash_table_insert(HashTable* hashTable, HashTableKey key, HashTableVa
 }
 
 /**
- * @desc: 散列表删除元素
- * @param: hashTable -> 散列表地址
- * @param: key -> 待删除元素关键字
- * @return: 0：删除成功，非零：删除失败
+ * @desc 散列表删除元素
+ * @param hashTable -> 散列表地址
+ * @param key -> 待删除元素关键字
+ * @return 0：删除成功，非零：删除失败
  */
 int hash_table_remove(HashTable *hashTable, HashTableKey key){
     HashTableEntry *rover;
@@ -191,10 +191,10 @@ int hash_table_remove(HashTable *hashTable, HashTableKey key){
 }
 
 /**
- * @desc: 散列表根据关键字查找元素
- * @param: hashTable -> 散列表地址
- * @param: key -> 待查找元素关键字
- * @return: 查找到的元素值
+ * @desc 散列表根据关键字查找元素
+ * @param hashTable -> 散列表地址
+ * @param key -> 待查找元素关键字
+ * @return 查找到的元素值
  */
 HashTableValue hash_table_lookup(HashTable *hashTable, HashTableKey key){
     HashTableEntry *rover;
@@ -216,8 +216,8 @@ HashTableValue hash_table_lookup(HashTable *hashTable, HashTableKey key){
 }
 
 /**
- * @desc: 显示整个散列表的结构
- * @param: hashTable -> 散列表地址
+ * @desc 显示整个散列表的结构
+ * @param hashTable -> 散列表地址
  */
 void hash_table_show(HashTable *hashTable){
     HashTableEntry *rover;
@@ -232,8 +232,8 @@ void hash_table_show(HashTable *hashTable){
 }
 
 /**
- * @desc: 销毁散列表
- * @param: hashTable -> 散列表地址
+ * @desc 销毁散列表
+ * @param hashTable -> 散列表地址
  */
 void hash_table_clear(HashTable* hashTable) {
     HashTableEntry *linkListNode;
