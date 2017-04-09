@@ -1,2 +1,0 @@
-ToolSet: w64 3.4@E:\Dev-Cpp\MinGW64
-CMake: 3.6.3@E:\JetBrains\CLion\bin\cmake\bin\cmake.exe
