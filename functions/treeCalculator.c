@@ -8,38 +8,13 @@
 #include <stdlib.h>
 #include "treeCalculator.h"
 #include "../common/expressionBase.h"
+#include "../test/alloc-testing.h"
 
 char legalDoubleOperator[] = {'+', '-', '*', '/', '^', '%'};
 
-char legalSingleOperator[] = {'-','s', 'c', 't', 'a', 'e'};
+char legalSingleOperator[] = {'-','s', 'c', 't', 'o', 'e'};
 
-/*
-int treeCalculator(){
-    /* 存储输入的表达式字符串 */
-/*
-char exp[1000];
-char expReform[1003] = "0+";
-double result = 0;
-while (1){
-    puts("请输入您要计算的表达式:");
-    fflush (stdin);
-    gets(exp);
-    /*给表达式之前加0+，以防止表达式以-开头的情况出现而程序出错*/
-/*
-    strcat(expReform, exp);
-    result = doExpressionCal(expReform);
-    /*错误处理，防止输入不合法时程序崩溃*/
-/*
-    if (result == 0){
-        printf("计算出错，请检查表达式并重新输入!括号中不能包括单一表达式\n");
-    } else{
-        break;
-    }
-}
-
-return 0;
-}*/
-
+/*含有变量的表达式处理赋值*/
 double doExpressionCalWithVariable(char *exp, double* rst, double value){
     if (!strchr(exp,'x')){
         printf("Wrong expression：unknown variable!\n");
@@ -54,17 +29,25 @@ double doExpressionCalWithVariable(char *exp, double* rst, double value){
     return 0;
 }
 
+/*表达式计算主函数*/
 double doExpressionCal(char *exp, double* rst){
+    printf("Print expression...\n");
+    puts(exp);
+    printf("Shortening expression...\n");
     shortenExpression(exp);
+    printf("Creating expression tree...\n");
     BinaryTree* binaryTree = binaryTree_init();
     create_expression_tree(binaryTree, binaryTree->rootNode, BITREE_NODE_LEFT, exp, (int) strlen(exp));
+    printf("Print tree...\n");
+    binaryTree_inOrderNode(binaryTree->rootNode);
+    printf("\n");
     calculate(binaryTree->rootNode,rst);
+    printf("Destroying expression tree...\n");
+    binaryTree_destroy(binaryTree);
     return 0;
-    /* printf("%s = ", exp_temp);
-    printf("%.3f\n", *result);*/
 }
 
-
+/*建立二叉表达式树*/
 int create_expression_tree(BinaryTree *tree, BinaryTreeNode *parent, BinaryTreeNodeSide side, char *exp, int length) {
      // leftBracketNum"("的未成对个数；
      // primaryPosition/secondaryPosition记录表达式中("*"、"/")/("+"、"-")的位置;
@@ -108,10 +91,11 @@ int create_expression_tree(BinaryTree *tree, BinaryTreeNode *parent, BinaryTreeN
                 printf("Wrong expression: not number or right bracket on the left of (operator)!\n");
                 return -1;
             }
+            /*若遍历的表达式中没有发现括号，则说明为主表达式，设置优先级次低的运算符位置*/
             if(leftBracketNum == 0) {
                 positionList[getTreePriority(*(exp+i))] = i;
                 //primaryPosition = i;
-            }//todo:说明作用
+            }
         }else if(isSingleOperator(*(exp+i)) && *(exp+i) != '-') {
             if(isDoubleOperator(*(exp+i-1)) && *(exp+i+1) != '(') {
                 printf("Wrong expression: not operator on the left or not left bracket on the right of (single operator)!\n");
@@ -123,10 +107,11 @@ int create_expression_tree(BinaryTree *tree, BinaryTreeNode *parent, BinaryTreeN
                 return -1;
                 /* 增加对 *(exp+i-1)=='(' 的判断，以识别括号中首项为负数的情况*/
             }
+            /*若遍历的表达式中没有发现括号，则说明为主表达式，设置优先级最低的运算符位置*/
             if(leftBracketNum == 0) {
                 positionList[getTreePriority(*(exp+i))] = i;
-               // secondaryPosition = i;
-            }//todo:说明作用
+                //secondaryPosition = i;
+            }
         } else if(*(exp+i) == '(') {
             if(isSingleOperator(*(exp+i-1)) || isDoubleOperator(*(exp+i-1)) || *(exp+i-1)=='(') leftBracketNum++;
             else {
@@ -152,12 +137,14 @@ int create_expression_tree(BinaryTree *tree, BinaryTreeNode *parent, BinaryTreeN
     }
     /*判断表达式是否正确结束*/
 
+    /*获取优先级最低的运算符位置*/
     for (int j = 0; j < POSITION_SIZE ;j++){
         if (positionList[j] != -1) {
             secondaryPosition = positionList[j];
             break;
         }
     }
+    /*获取优先级次低的运算符位置*/
     for (int j = 0; j < POSITION_SIZE ;j++){
         if (positionList[j] != -1 && positionList[j] != secondaryPosition) {
             primaryPosition = positionList[j];
@@ -187,7 +174,7 @@ int create_expression_tree(BinaryTree *tree, BinaryTreeNode *parent, BinaryTreeN
             /*去除左右两个括号，获取括号中的内容*/
             if(!create_expression_tree(tree, parent, side, exp+1, length-2)) return 0;
             else return -1;
-        } else {//todo:Check
+        } else {
             if(*(exp+1)!='(' || (isSingleOperator(*exp) && *exp != '-')) {//此时表达式一定是一个数字
                 for(i = 0; i < length; i++) {
                     if(*(exp+i)=='.')
@@ -240,6 +227,7 @@ int create_expression_tree(BinaryTree *tree, BinaryTreeNode *parent, BinaryTreeN
     }
 }
 
+/*递归计算二叉树*/
 int calculate(BinaryTreeNode * node, double* rst) {
     double l = 0, r = 0;//l、r分别存放左右子树所代表的字表达式的值
     if(!node) {
@@ -260,6 +248,7 @@ int calculate(BinaryTreeNode * node, double* rst) {
     }
 }
 
+/*判断是否为双目运算符*/
 bool isDoubleOperator(char op){
     int length = sizeof(legalDoubleOperator) / sizeof(legalDoubleOperator[0]);
     for (int i = 0; i < length; i++){
@@ -268,6 +257,7 @@ bool isDoubleOperator(char op){
     return false;
 }
 
+/*判断是否为单目运算符*/
 bool isSingleOperator(char op){
     int length = sizeof(legalSingleOperator) / sizeof(legalSingleOperator[0]);
     for (int i = 0; i < length; i++){
@@ -276,6 +266,7 @@ bool isSingleOperator(char op){
     return false;
 }
 
+/*获得表达式里的单目运算符，先计算出结果存入二叉树*/
 char getSingleOperator(char *op){
     int length = sizeof(legalSingleOperator) / sizeof(legalSingleOperator[0]);
     for (int i = 1; i < length; i++){
@@ -286,15 +277,18 @@ char getSingleOperator(char *op){
     return NULL;
 }
 
+/*判断双目运算符左边的输入是否合法*/
 bool isValidDoubleOperator(char op){
     return isNumber(op) || op==')';
 }
 
+/*判断输入的字符是否为数字*/
 bool isNumber(char c){
     if (c>='0'&& c<='9') return true;
     else return false;
 }
 
+/*获取运算符优先级*/
 int getTreePriority(char op) {
     switch(op) {
         case '^':

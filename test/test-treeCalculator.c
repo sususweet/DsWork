@@ -16,6 +16,8 @@ int treeCalculatorTest(){
     char exp6[] = "sin(1)+2";
     char exp7[] = "5+9*8-exp(1)";
     char exp8[] = "5+x*8-x";
+    char exp9[] = "7.25-cot(1)+2";
+    char exp10[] = "2*(8-6)+2";
     double rst = 0;
 
     doExpressionCal(exp1, &rst);
@@ -32,11 +34,12 @@ int treeCalculatorTest(){
     assert((fabs(rst - 2.841470)<0.0001));
     doExpressionCal(exp7, &rst);
     assert((fabs(rst - 74.281718)<0.0001));
-
     doExpressionCalWithVariable(exp8, &rst, 1);
     printf("%lf\n",rst);
-    /*binaryTree_inOrderNode(binaryTree->rootNode);
-    printf("\n");
-    binaryTree_postOrderNode(binaryTree->rootNode);*/
+    assert(rst == 12);
+    doExpressionCal(exp9, &rst);
+    assert((fabs(rst - 8.6079)<0.0001));
+    doExpressionCal(exp10, &rst);
+    assert(rst == 6);
     return 0;
 }

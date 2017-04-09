@@ -6,7 +6,7 @@
 #include <string.h>
 #include "expressionBase.h"
 
-//获取运算符优先级，#优先级最低，防止被弹出算符栈，也标记着运算结束
+//获取运算符优先级，#优先级最低
 int getPriority(char op) {
     switch(op) {
         case '^':
@@ -69,7 +69,7 @@ double numSingleCal(double val1, char op) {
     }
 }
 
-//字符串替换，以识别输入的sin、cos等三角函数计算符
+//字符串替换，以识别输入的sin、cos等函数计算符
 char* shortenExpression(char* exp){
     strReplace(exp,"exp", "e");
     strReplace(exp,"sin", "s");

@@ -91,6 +91,8 @@ treeCalculator.h
 I:/DatabaseStructure/Project1/functions/treeCalculator.h
 ../common/expressionBase.h
 I:/DatabaseStructure/Project1/common/expressionBase.h
+../test/alloc-testing.h
+I:/DatabaseStructure/Project1/test/alloc-testing.h
 
 I:/DatabaseStructure/Project1/functions/treeCalculator.h
 ../structure/binaryTree.h

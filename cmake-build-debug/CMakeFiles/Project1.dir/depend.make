@@ -30,6 +30,7 @@ CMakeFiles/Project1.dir/functions/treeCalculator.c.obj: ../common/expressionBase
 CMakeFiles/Project1.dir/functions/treeCalculator.c.obj: ../functions/treeCalculator.c
 CMakeFiles/Project1.dir/functions/treeCalculator.c.obj: ../functions/treeCalculator.h
 CMakeFiles/Project1.dir/functions/treeCalculator.c.obj: ../structure/binaryTree.h
+CMakeFiles/Project1.dir/functions/treeCalculator.c.obj: ../test/alloc-testing.h
 
 CMakeFiles/Project1.dir/main.c.obj: .././functions/polyCalculation.h
 CMakeFiles/Project1.dir/main.c.obj: ../functions/expressionCalculation.h

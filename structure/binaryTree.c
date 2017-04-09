@@ -91,22 +91,10 @@ int binaryTree_removeNode(BinaryTree* binaryTree, BinaryTreeNode* node){
     return 0;
 }
 
-BinaryTreeNode* binaryTree_root_node(BinaryTree* binaryTree){
-    return binaryTree->rootNode;
-}
-
-BinaryTreeValue binaryTree_node_value(BinaryTreeNode* node){
-    return node->value;
-}
-
 BinaryTreeNode* binaryTree_node_child(BinaryTreeNode* node, BinaryTreeNodeSide side){
     if (side == BITREE_NODE_LEFT || side == BITREE_NODE_RIGHT){
         return node->children[side];
     }else return NULL;
-}
-
-BinaryTreeNode* binaryTree_node_parent(BinaryTreeNode* node){
-    return node->parent;
 }
 
 void binaryTree_preOrderNode(BinaryTreeNode* node){
@@ -121,7 +109,7 @@ void binaryTree_inOrderNode(BinaryTreeNode* node){
     if (!node) return;
     binaryTree_inOrderNode(node->children[BITREE_NODE_LEFT]);
     //printf("%d\n", (int) node->value);
-    printf("%c", *((char*)node->value));
+    printf("%s", (char*)node->value);
     binaryTree_inOrderNode(node->children[BITREE_NODE_RIGHT]);
 }
 
@@ -130,4 +118,5 @@ void binaryTree_postOrderNode(BinaryTreeNode* node){
     binaryTree_postOrderNode(node->children[BITREE_NODE_LEFT]);
     binaryTree_postOrderNode(node->children[BITREE_NODE_RIGHT]);
     printf("%c", *((char*)node->value));
+    //printf("%d\n", (int) node->value);
 }
